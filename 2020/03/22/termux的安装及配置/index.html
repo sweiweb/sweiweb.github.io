@@ -58,7 +58,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">4字</span>
+            <span class="post-count">110字</span>
         </span>
     </span>
 
@@ -78,6 +78,8 @@
 
     
     
+    <div class="tocbot"></div>
+
 
 
 
@@ -90,8 +92,14 @@
       
 
       
-      <p>#ternux 的安装</p>
+      <h1 id="termux-的安装"><a href="#termux-的安装" class="headerlink" title="termux 的安装"></a>termux 的安装</h1><ul>
+<li><a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener">https://f-droid.org/packages/com.termux/</a></li>
+</ul>
+<hr>
+<h1 id="termux-的配置"><a href="#termux-的配置" class="headerlink" title="termux 的配置"></a>termux 的配置</h1><h2 id="更换清华源"><a href="#更换清华源" class="headerlink" title="更换清华源"></a>更换清华源</h2><p>官网源非常慢～</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/game.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/science.list</span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
 
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
       
       <!-- reward -->
       
