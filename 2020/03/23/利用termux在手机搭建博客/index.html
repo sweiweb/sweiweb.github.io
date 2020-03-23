@@ -62,7 +62,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.6k字</span>
+            <span class="post-count">1.8k字</span>
         </span>
     </span>
 
@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">6分钟</span>
+            <span class="post-count">7分钟</span>
         </span>
     </span>
 </div>
@@ -98,11 +98,11 @@
       
       <p>安装 <code>termux</code> 后，可以安装 <code>hexo</code>，在手机上搭建博客。</p>
 <h1 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h1><p>输入以下命令即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pkg install nodejs</span><br><span class="line">pkg install git</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pkg install nodejs</span><br><span class="line">pkg install git</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
-<h2 id="初始化-hexo"><a href="#初始化-hexo" class="headerlink" title="初始化 hexo"></a>初始化 hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="初始化-hexo"><a href="#初始化-hexo" class="headerlink" title="初始化 hexo"></a>初始化 hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean  <span class="comment">#清除缓存</span></span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>此时，可在本机浏览器中输入<code>127.0.0.1:4000</code>查看效果</p>
 <p>如果想在其他浏览器中搜索到自己的博客，可以在 <code>github</code> 上托管博客</p>
@@ -119,7 +119,7 @@
 <p>使用 <code>ssh-keygen</code> 生成私钥和公钥</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
 
-<p>注意查看输出信息的私钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看私钥内容。</p>
+<p>注意查看输出信息的共钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容。</p>
 <ul>
 <li>github</li>
 </ul>
@@ -180,7 +180,7 @@
 <h2 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
 <p>随后会在目录下的 <code>./source/tags</code> 创建名为 <code>index.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出，格式可参考</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
+<h2 id="修改模版"><a href="#修改模版" class="headerlink" title="修改模版"></a>修改模版</h2><p>在目录 <code>./blog/scaffolds/</code> 下可以修改<code>draft.md</code>，<code>page.md</code>，<code>post.md</code> 三种默认布局</p>
 <h1 id="markdown-语法"><a href="#markdown-语法" class="headerlink" title="markdown 语法"></a>markdown 语法</h1><p><code>hexo</code> 的文章内容采用 <code>markdown</code> 语法，撰写的文章内容应基于 <code>markdown</code> ，基本语法请在<strong>1分钟</strong>内学会</p>
 <h1 id="更改-hexo-主题"><a href="#更改-hexo-主题" class="headerlink" title="更改 hexo 主题"></a>更改 hexo 主题</h1><p>进入 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo 主题官网</a> 挑选合适的主题，这里以主题 <code>A-Ayer</code> 为例</p>
 <p>点击主题下方链接进入下载页面</p>
@@ -198,6 +198,39 @@
 
 <p>主题支持的语言在目录 <code>./themes/ayer/languages/</code> 下查看</p>
 <h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>关于主题的更多细节配置，可以修改 <code>./themes/ayer/_config.yml</code> 文件， 可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出</p>
+<h1 id="hexo-数据迁移"><a href="#hexo-数据迁移" class="headerlink" title="hexo 数据迁移"></a>hexo 数据迁移</h1><p><strong>换电脑了怎么办？！</strong></p>
+<ol>
+<li><p>在新电脑安装 <code>hexo</code></p>
+</li>
+<li><p>拷贝原来电脑的<code>./blog</code> 目录下的几个关键目录和文件至新电脑</p>
+</li>
+</ol>
+<ul>
+<li>_config.yml</li>
+<li>package.json</li>
+<li>scaffolds/</li>
+<li>source/</li>
+<li>themes/</li>
+</ul>
+<ol start="3">
+<li>进入新电脑博客目录 <code>./blog/</code>， 安装相关模块</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>添加新电脑密钥</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<p>注意查看输出信息的公钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容。</p>
+<ol start="5">
+<li><p>修改 <code>github</code> 和 <code>gitee</code> 平台的<code>ssh公钥</code></p>
+</li>
+<li><p>部署</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+
 
       
       <!-- reward -->
