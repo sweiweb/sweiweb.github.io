@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    termux 的安装及配置 |  何事？
+    利用termux在手机搭建博客 |  何事？
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -30,7 +30,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-termux的安装及配置" class="article article-type-post" itemscope
+  <article id="post-利用termux在手机搭建博客" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -38,7 +38,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  termux 的安装及配置
+  利用termux在手机搭建博客
 </h1>
  
 
@@ -47,8 +47,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/03/22/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-03-22T10:44:05.000Z" itemprop="datePublished">2020-03-22</time>
+      <a href="/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2020-03-23T00:44:34.000Z" itemprop="datePublished">2020-03-23</time>
 </a>
       
   <div class="article-category">
@@ -62,7 +62,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">457字</span>
+            <span class="post-count">768字</span>
         </span>
     </span>
 
@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2分钟</span>
+            <span class="post-count">3分钟</span>
         </span>
     </span>
 </div>
@@ -96,52 +96,53 @@
       
 
       
-      <h1 id="termux-的安装"><a href="#termux-的安装" class="headerlink" title="termux 的安装"></a>termux 的安装</h1><p>下载地址</p>
-<ul>
-<li><a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener">https://f-droid.org/packages/com.termux/</a></li>
-</ul>
-<hr>
-<h1 id="termux-的配置"><a href="#termux-的配置" class="headerlink" title="termux 的配置"></a>termux 的配置</h1><h2 id="更换清华源"><a href="#更换清华源" class="headerlink" title="更换清华源"></a>更换清华源</h2><p>官网源非常慢～ 如果可以忍受，不建议更换清华源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/game.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/science.list</span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
+      <p>安装 <code>termux</code> 后，可以安装 <code>hexo</code>，在手机上搭建博客。</p>
+<h1 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h1><p>输入一下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pkg install nodejs</span><br><span class="line">pkg install git</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
 
-<h2 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h2><h3 id="pkg-命令介绍"><a href="#pkg-命令介绍" class="headerlink" title="pkg 命令介绍"></a>pkg 命令介绍</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pkg search &lt;query&gt;      <span class="comment">#搜索包 </span></span><br><span class="line">pkg install &lt;package&gt;   <span class="comment">#安装包 </span></span><br><span class="line">pkg uninstall &lt;package&gt; <span class="comment">#卸载包 </span></span><br><span class="line">pkg reinstall &lt;package&gt; <span class="comment">#重新安装包 </span></span><br><span class="line">pkg update              <span class="comment">#更新源 </span></span><br><span class="line">pkg upgrade             <span class="comment">#升级软件包 </span></span><br><span class="line">pkg list-all            <span class="comment">#列出可供安装的所有包 </span></span><br><span class="line">pkg list-installed      <span class="comment">#列出已经安装的包 </span></span><br><span class="line">pkg shoe &lt;package&gt;      <span class="comment">#显示某个包的详细信息 </span></span><br><span class="line">pkg files &lt;package&gt;     <span class="comment">#显示某个包的相关文件夹路径</span></span><br></pre></td></tr></table></figure>
+<h2 id="初始化-hexo"><a href="#初始化-hexo" class="headerlink" title="初始化 hexo"></a>初始化 hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
-<h3 id="安装常用包"><a href="#安装常用包" class="headerlink" title="安装常用包"></a>安装常用包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install vim curl wget git unzip unrar</span><br></pre></td></tr></table></figure>
+<p>此时，可在本机浏览器中输入<code>127.0.0.1:4000</code>查看效果</p>
+<p>如果想在其他浏览器中搜索到自己的博客，可以在 <code>github</code> 上托管博客</p>
+<h1 id="将博客托管在github平台"><a href="#将博客托管在github平台" class="headerlink" title="将博客托管在github平台"></a>将博客托管在github平台</h1><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>首先登入 <a href="https://github.com/" target="_blank" rel="noopener">github</a>，在右上角<code>+</code>点击 <code>New repository</code> 创建一个仓库，在 <code>repository name</code> 中输入 <code>github账户名.github.io</code> ，同时勾选下方的 <code>Initialize this repository with a README</code>。</p>
+<h2 id="连接-hexo-和-git"><a href="#连接-hexo-和-git" class="headerlink" title="连接 hexo 和 git"></a>连接 hexo 和 git</h2><p>在终端输入命令设置用户名称和邮箱地址</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br></pre></td></tr></table></figure>
 
-<h3 id="解决-vim-汉字乱码"><a href="#解决-vim-汉字乱码" class="headerlink" title="解决 vim 汉字乱码"></a>解决 vim 汉字乱码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim .vimrc</span><br></pre></td></tr></table></figure>
+<p>使用 <code>ssh-keygen</code> 生成私钥和公钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
 
-<p>输入<code>i</code>进入编辑，添加以下内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1</span><br><span class="line"><span class="built_in">set</span> enc=utf8</span><br><span class="line"><span class="built_in">set</span> fencs=utf8,gbk,gb2312,gb18030</span><br></pre></td></tr></table></figure>
+<p>注意查看输出信息的私钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看私钥内容。然后登录 <code>Github</code>，点击右上角头像下的<code>settings</code>，点击 <code>SSH and GPG keys</code> 菜单下的 <code>New SSH key</code> 添加 <code>ssh</code>，将 <code>id_rsa.pub</code> 文件里的内容复制上去。随后，可以在终端输入命令 <code>ssh -T git@github.com</code> 测试添加 <code>ssh</code> 是否成功。</p>
+<h2 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h2><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code>，修改文件末尾的 <code>Deployment</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:your/name.github.io.git</span><br></pre></td></tr></table></figure>
 
-<p>输入<code>:wq</code>保存并退出，最后 <code>source</code> 下变量</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> .vimrc</span><br></pre></td></tr></table></figure>
+<p>其中的 <code>repository</code> 值可以在 <code>github</code> 账户下 <code>your repositories</code> 的 <code>clone or downlord</code> 中，选择 <code>Ues SSH</code> 查看</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>首先尝试创建一个新文章，输入命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="安装-SSH-服务"><a href="#安装-SSH-服务" class="headerlink" title="安装 SSH 服务"></a>安装 SSH 服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
+<p>例如 <code>hexo new title</code> ， 随后会在目录下的 <code>./source/_post</code> 创建名为 <code>title.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写</p>
+<p>编写好文章后，输入命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 
-<p>查询手机ip</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+<p>至此，新文章就可以通过输入网站地址 <code>https://github账户.github.io</code> 查看文章</p>
+<h1 id="hexo-使用教程"><a href="#hexo-使用教程" class="headerlink" title="hexo 使用教程"></a>hexo 使用教程</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [模版layout] &lt;题目title&gt;</span><br></pre></td></tr></table></figure>
 
-<p>查询当前用户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whoami</span><br></pre></td></tr></table></figure>
+<p>通常情况下可直接输入 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &lt;title&gt;</span><br></pre></td></tr></table></figure>
 
-<p>确认ssh监听端口</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp | grep sshd</span><br></pre></td></tr></table></figure>
+<p> 随后会在目录下的 <code>./source/_post</code> 创建名为 <code>&lt;title&gt;.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，开头格式可参考</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> ---markdown</span><br><span class="line">title: &lt;title&gt;</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">tags:</span><br><span class="line">- tag1</span><br><span class="line">categories: </span><br><span class="line">- category1</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<p>需要注意的是，<code>ssh</code> 需要手动开启， 开启命令为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshd</span><br></pre></td></tr></table></figure>
+<h2 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
 
-<p>如果需要，可加入到<code>~/.bashrc</code> 中自动启动，使用<code>vim ~/.bashrc</code>进入文件，输入<code>i</code>开始编辑,添加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> sshd</span><br></pre></td></tr></table></figure>
+<p>随后会在目录下的 <code>./source/categories</code> 创建名为 <code>index.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，格式可参考</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>其中 <code>模版layout</code> 将匹配主题目录<code>./themes/yourthemes/layout</code> 下的 <code>.ejs</code> 文件，因号为内文件名</p>
+<h2 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>随后会在目录下的 <code>./source/tags</code> 创建名为 <code>index.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，格式可参考</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<p>最后输入<code>:wq</code>保存并退出，重启即可生效</p>
-<h2 id="更改欢迎语"><a href="#更改欢迎语" class="headerlink" title="更改欢迎语"></a>更改欢迎语</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="variable">$PREFIX</span>/etc/motd</span><br></pre></td></tr></table></figure>
+<h1 id="markdown-语法"><a href="#markdown-语法" class="headerlink" title="markdown 语法"></a>markdown 语法</h1><p><code>hexo</code> 的文章内容采用 <code>markdown</code> 语法，撰写的文章内容应基于 <code>markdown</code> 基本语法请在<strong>1分钟</strong>内学会</p>
 
-<h2 id="授予访问本机存储权限"><a href="#授予访问本机存储权限" class="headerlink" title="授予访问本机存储权限"></a>授予访问本机存储权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建软链接"><a href="#创建软链接" class="headerlink" title="创建软链接"></a>创建软链接</h2><p>以 QQ 为例</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /data/data/com.termux/files/home/storage/shared/tencent/QQfile_recv QQ</span><br></pre></td></tr></table></figure>
-
-<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>
       
       <!-- reward -->
       
@@ -164,7 +165,7 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/termux/" rel="tag">termux</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/termux/" rel="tag">termux</a></li></ul>
 
 
     </footer>
@@ -175,15 +176,11 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            在termux上安装python
-          
-        </div>
-      </a>
     
+      <a href="/2020/03/23/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">利用termux搭建手机私有云</div>
+      </a>
     
   </nav>
 
