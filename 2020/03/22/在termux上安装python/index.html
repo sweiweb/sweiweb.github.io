@@ -62,7 +62,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">128字</span>
+            <span class="post-count">154字</span>
         </span>
     </span>
 
@@ -98,27 +98,30 @@
       
       <h1 id="在-termux-上安装-python"><a href="#在-termux-上安装-python" class="headerlink" title="在 termux 上安装 python"></a>在 termux 上安装 python</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg instll python</span><br></pre></td></tr></table></figure>
 
+<p>如果安装 <code>python2</code> ,将命令<code>pkg instll python</code> 改为 <code>pkg instll python2</code></p>
 <h2 id="升级pip版本"><a href="#升级pip版本" class="headerlink" title="升级pip版本"></a>升级pip版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+<p>对应的<code>python2</code> 为 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
 
 <h2 id="安装-ipython"><a href="#安装-ipython" class="headerlink" title="安装 ipython"></a>安装 ipython</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install clang</span><br><span class="line">pip install ipython</span><br><span class="line">pip3.6 install ipython</span><br></pre></td></tr></table></figure>
 
-<p>优化vim</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install vim-python</span><br></pre></td></tr></table></figure>
+<h2 id="优化vim"><a href="#优化vim" class="headerlink" title="优化vim"></a>优化vim</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install vim-python</span><br></pre></td></tr></table></figure>
 
 <h2 id="安装科学计算包"><a href="#安装科学计算包" class="headerlink" title="安装科学计算包"></a>安装科学计算包</h2><ul>
-<li>jupyter</li>
-<li>numpy</li>
-<li>matplotlib</li>
+<li><code>jupyter</code></li>
+<li><code>numpy</code></li>
+<li><code>matplotlib</code></li>
 </ul>
 <h3 id="首先安装依赖"><a href="#首先安装依赖" class="headerlink" title="首先安装依赖"></a>首先安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install python python-dev clang fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config</span><br></pre></td></tr></table></figure>
-<p>有些 -dev 可能会安装失败， 这没问题～ 继续</p>
+<p>有些 <code>-dev</code> 可能会安装失败， 这没问题～ 继续</p>
 <h3 id="安装jupyter"><a href="#安装jupyter" class="headerlink" title="安装jupyter"></a>安装jupyter</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install jupyter</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装-numpy"><a href="#安装-numpy" class="headerlink" title="安装 numpy"></a>安装 numpy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install numpy</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装-matplotlib"><a href="#安装-matplotlib" class="headerlink" title="安装 matplotlib"></a>安装 matplotlib</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install matplotlib</span><br></pre></td></tr></table></figure>
-<p>注意 numpy 是 matplotlib 的依赖包， 二者不能同时安装</p>
-<h3 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h3>
+<p>注意 <code>numpy</code> 是 <code>matplotlib</code> 的依赖包， 二者不能同时安装</p>
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>
       
       <!-- reward -->
       

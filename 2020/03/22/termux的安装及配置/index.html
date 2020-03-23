@@ -62,7 +62,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">403字</span>
+            <span class="post-count">457字</span>
         </span>
     </span>
 
@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
+            <span class="post-count">2分钟</span>
         </span>
     </span>
 </div>
@@ -96,7 +96,8 @@
       
 
       
-      <h1 id="termux-的安装"><a href="#termux-的安装" class="headerlink" title="termux 的安装"></a>termux 的安装</h1><ul>
+      <h1 id="termux-的安装"><a href="#termux-的安装" class="headerlink" title="termux 的安装"></a>termux 的安装</h1><p>下载地址</p>
+<ul>
 <li><a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener">https://f-droid.org/packages/com.termux/</a></li>
 </ul>
 <hr>
@@ -109,10 +110,10 @@
 
 <h3 id="解决-vim-汉字乱码"><a href="#解决-vim-汉字乱码" class="headerlink" title="解决 vim 汉字乱码"></a>解决 vim 汉字乱码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim .vimrc</span><br></pre></td></tr></table></figure>
 
-<p>添加以下内容</p>
+<p>输入<code>i</code>进入编辑，添加以下内容</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1</span><br><span class="line"><span class="built_in">set</span> enc=utf8</span><br><span class="line"><span class="built_in">set</span> fencs=utf8,gbk,gb2312,gb18030</span><br></pre></td></tr></table></figure>
 
-<p>最后 source 下变量</p>
+<p>输入<code>:wq</code>保存并退出，最后 source 下变量</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> .vimrc</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装-SSH-服务"><a href="#安装-SSH-服务" class="headerlink" title="安装 SSH 服务"></a>安装 SSH 服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
@@ -129,7 +130,10 @@
 <p>需要注意的是，ssh 需要手动开启， 开启命令为</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshd</span><br></pre></td></tr></table></figure>
 
-<p>如果需要，可加入到~/.bashrc 中自动启动。</p>
+<p>如果需要，可加入到~/.bashrc 中自动启动，使用<code>vim ~/.bashrc</code>进入文件，输入<code>i</code>开始编辑,添加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> sshd</span><br></pre></td></tr></table></figure>
+
+<p>最后输入<code>:wq</code>保存并退出，重启即可生效</p>
 <h2 id="更改欢迎语"><a href="#更改欢迎语" class="headerlink" title="更改欢迎语"></a>更改欢迎语</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="variable">$PREFIX</span>/etc/motd</span><br></pre></td></tr></table></figure>
 
 <h2 id="授予访问本机存储权限"><a href="#授予访问本机存储权限" class="headerlink" title="授予访问本机存储权限"></a>授予访问本机存储权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
@@ -137,7 +141,7 @@
 <h2 id="创建软链接"><a href="#创建软链接" class="headerlink" title="创建软链接"></a>创建软链接</h2><p>以 QQ 为例</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /data/data/com.termux/files/home/storage/shared/tencent/QQfile_recv QQ</span><br></pre></td></tr></table></figure>
 
-<h2 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h2>
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>
       
       <!-- reward -->
       
