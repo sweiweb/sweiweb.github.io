@@ -99,6 +99,7 @@
       <h1 id="安装-filebrowser"><a href="#安装-filebrowser" class="headerlink" title="安装 filebrowser"></a>安装 filebrowser</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://filebrowser.xyz/get.sh | bash</span><br></pre></td></tr></table></figure>
 
 <h2 id="启动命令"><a href="#启动命令" class="headerlink" title="启动命令"></a>启动命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filebrowser -a 0.0.0.0 -p 8000 -r /path/to/your/files</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
 <p>这时候就可以在浏览器中输入<code>127.0.0.1:8000</code> 或者在局域网中输入 <code>ip:8000</code> 进行访问，默认用户名和密码均为<code>admin</code></p>
 <p>但是，如果想通过公网在任何浏览器中进行访问，需要设置内网穿透，常用软件有<code>cpolar</code>，<code>Ngrok</code>，<code>frp</code>，这里重点说<code>cpolar</code>的用法。</p>

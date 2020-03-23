@@ -62,7 +62,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">117字</span>
+            <span class="post-count">111字</span>
         </span>
     </span>
 
@@ -96,13 +96,14 @@
       
 
       
-      <h1 id="在-termux-上安装-octave"><a href="#在-termux-上安装-octave" class="headerlink" title="在 termux 上安装 octave"></a>在 termux 上安装 octave</h1><p>手机借助 <code>termux</code> 安装 <code>octave</code> ，可在手机实现科学计算</p>
-<h2 id="添加-GNU-软件源"><a href="#添加-GNU-软件源" class="headerlink" title="添加 GNU 软件源"></a>添加 GNU 软件源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install curl gnupg</span><br><span class="line">curl -LO https://its-pointless.github.io/setup-pointless-repo.sh </span><br><span class="line">bash setup-pointless-repo.sh</span><br></pre></td></tr></table></figure>
+      <p>手机借助 <code>termux</code> 安装 <code>octave</code> ，可在手机实现科学计算</p>
+<h1 id="添加-GNU-软件源"><a href="#添加-GNU-软件源" class="headerlink" title="添加 GNU 软件源"></a>添加 GNU 软件源</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install curl gnupg</span><br><span class="line">curl -LO https://its-pointless.github.io/setup-pointless-repo.sh </span><br><span class="line">bash setup-pointless-repo.sh</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
 <p>如果不成功，换用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p <span class="string">"<span class="variable">$PREFIX</span>/etc/apt/sources.list.d/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb https://its-pointless.github.io/files/ termux extras"</span> &gt; <span class="string">"<span class="variable">$PREFIX</span>/etc/apt/sources.list.d/pointless.list"</span></span><br><span class="line">curl <span class="string">"https://its-pointless.github.io/pointless.gpg"</span> | apt-key add</span><br></pre></td></tr></table></figure>
 
-<h2 id="安装-octave"><a href="#安装-octave" class="headerlink" title="安装 octave"></a>安装 octave</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install octave</span><br></pre></td></tr></table></figure>
+<h1 id="安装-octave"><a href="#安装-octave" class="headerlink" title="安装 octave"></a>安装 octave</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install octave</span><br></pre></td></tr></table></figure>
 
 <p>如果想让 <code>octave</code> 链接 <code>jupyter</code> ， 安装内核</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install octave-kernel</span><br></pre></td></tr></table></figure>
