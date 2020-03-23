@@ -40,7 +40,7 @@
       <h1><a href="/">何事？</a></h1>
       <div id="subtitle-box">
         
-          <span id="subtitle">晚来天欲雪，能饮一杯无？</span>
+        <span id="subtitle"></span>
         
       </div>
       <div>
@@ -60,6 +60,8 @@
 </section>
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 
 <div id="main">
   <section class="outer">
@@ -564,6 +566,21 @@
 
 <script src="/js/lazyload.min.js"></script>
 
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['晚来天欲雪，能饮一杯无？', '山中何事？松花酿酒，春水煎茶', ''],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
 
 
 
