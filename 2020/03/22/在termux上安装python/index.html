@@ -62,7 +62,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">154字</span>
+            <span class="post-count">302字</span>
         </span>
     </span>
 
@@ -115,8 +115,22 @@
 </ul>
 <h3 id="首先安装依赖"><a href="#首先安装依赖" class="headerlink" title="首先安装依赖"></a>首先安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install python python-dev clang fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config</span><br></pre></td></tr></table></figure>
 <p>有些 <code>-dev</code> 可能会安装失败， 这没问题～ 继续</p>
-<h3 id="安装jupyter"><a href="#安装jupyter" class="headerlink" title="安装jupyter"></a>安装jupyter</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install jupyter</span><br></pre></td></tr></table></figure>
+<h3 id="安装-jupyter"><a href="#安装-jupyter" class="headerlink" title="安装 jupyter"></a>安装 jupyter</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install jupyter</span><br></pre></td></tr></table></figure>
+<h4 id="juypter-默认文件配置"><a href="#juypter-默认文件配置" class="headerlink" title="juypter 默认文件配置"></a>juypter 默认文件配置</h4><p>创建密码</p>
+<p>终端输入 <code>ipython</code> 启动，随后依次输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from notebook.auth import passwd</span><br><span class="line">passwd()</span><br></pre></td></tr></table></figure>
 
+<p>创建密码并确认后记录<code>sha1</code>秘钥值，如 <code>&#39;sha1:XXXXXXX&#39;</code></p>
+<p>生成默认配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+
+<p>在生成的 <code>./.jupyter/jupyter_notebook_config.py</code> 配置文件中，采用命令 <code>vi .jupyter/jupyter_notebook_config.py</code> 进入文件，按<code>i</code>进入编辑状态修改以下几项内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.allow_remote_access = True</span><br><span class="line">c.NotebookApp.ip = <span class="string">'*'</span></span><br><span class="line">c.NotebookApp.port = 8000</span><br><span class="line">c.NotebookApp.password = u<span class="string">'sha1:XXXXXXX'</span></span><br></pre></td></tr></table></figure>
+
+<p>重启 <code>jupyter</code> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>随后可在本机浏览器中输入 <code>127.0.0.1：8000</code> 或局域网中输入 <code>ip:8000</code> 打开</p>
 <h3 id="安装-numpy"><a href="#安装-numpy" class="headerlink" title="安装 numpy"></a>安装 numpy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install numpy</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装-matplotlib"><a href="#安装-matplotlib" class="headerlink" title="安装 matplotlib"></a>安装 matplotlib</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install matplotlib</span><br></pre></td></tr></table></figure>
