@@ -180,12 +180,10 @@ function activateLightMode(){
 <li>搜索插件: <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></li>
 </ul>
 <h1 id="hexo-数据迁移"><a href="#hexo-数据迁移" class="headerlink" title="hexo 数据迁移"></a>hexo 数据迁移</h1><p><strong>换电脑了怎么办？！</strong></p>
-<ol>
+<ul>
 <li><p>在新电脑安装 <code>hexo</code></p>
 </li>
 <li><p>拷贝原来电脑的<code>./blog</code> 目录下的几个关键目录和文件至新电脑</p>
-</li>
-</ol>
 <ul>
 <li>_config.yml</li>
 <li>package.json</li>
@@ -193,22 +191,23 @@ function activateLightMode(){
 <li>source/</li>
 <li>themes/</li>
 </ul>
-<ol start="3">
-<li>进入新电脑博客目录 <code>./blog/</code>， 安装相关模块</li>
-</ol>
+</li>
+<li><p>进入新电脑博客目录 <code>./blog/</code>， 安装相关模块</p>
+</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<ol start="4">
+<ul>
 <li>添加新电脑密钥</li>
-</ol>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
 
 <p>注意查看输出信息的公钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容。</p>
-<ol start="5">
+<ul>
 <li><p>修改 <code>github</code> 和 <code>gitee</code> 平台的<code>ssh公钥</code></p>
 </li>
 <li><p>部署</p>
 </li>
-</ol>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 
 
