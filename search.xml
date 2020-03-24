@@ -7,8 +7,6 @@
 <h1 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h1><p>输入以下命令即可</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install nodejs</span><br><span class="line">pkg install git</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
-
 <h2 id="初始化-hexo"><a href="#初始化-hexo" class="headerlink" title="初始化 hexo"></a>初始化 hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean  <span class="comment">#清除缓存</span></span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>此时，可在本机浏览器中输入<code>127.0.0.1:4000</code>查看效果</p>
@@ -154,8 +152,6 @@
     <content><![CDATA[<p><code>filebrowser</code> 是一款远端文件浏览器，把服务部署在服务器上，只要保持连接设备与服务器间网络链接通畅，可以随时随地完成对文件和目录的管理操作，同时拥有上传和下载功能</p>
 <h1 id="安装-filebrowser"><a href="#安装-filebrowser" class="headerlink" title="安装 filebrowser"></a>安装 filebrowser</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://filebrowser.xyz/get.sh | bash</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
-
 <h2 id="启动命令"><a href="#启动命令" class="headerlink" title="启动命令"></a>启动命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">filebrowser -a 0.0.0.0 -p 8000 -r /path/to/your/files</span><br></pre></td></tr></table></figure>
 
 <p>这时候就可以在浏览器中输入<code>127.0.0.1:8000</code> 或者在局域网中输入 <code>ip:8000</code> 进行访问，默认用户名和密码均为<code>admin</code></p>
@@ -190,7 +186,6 @@
     <url>/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/</url>
     <content><![CDATA[<p>手机借助 <code>termux</code> 安装 <code>octave</code> ，可在手机实现科学计算</p>
 <h1 id="添加-GNU-软件源"><a href="#添加-GNU-软件源" class="headerlink" title="添加 GNU 软件源"></a>添加 GNU 软件源</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install curl gnupg</span><br><span class="line">curl -LO https://its-pointless.github.io/setup-pointless-repo.sh </span><br><span class="line">bash setup-pointless-repo.sh</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
 
 <p>如果不成功，换用</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p <span class="string">"<span class="variable">$PREFIX</span>/etc/apt/sources.list.d/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb https://its-pointless.github.io/files/ termux extras"</span> &gt; <span class="string">"<span class="variable">$PREFIX</span>/etc/apt/sources.list.d/pointless.list"</span></span><br><span class="line">curl <span class="string">"https://its-pointless.github.io/pointless.gpg"</span> | apt-key add</span><br></pre></td></tr></table></figure>
@@ -216,8 +211,6 @@
 <h1 id="安装-python"><a href="#安装-python" class="headerlink" title="安装 python"></a>安装 python</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg instll python</span><br></pre></td></tr></table></figure>
 
 <p>如果安装 <code>python2</code> ,将命令<code>pkg instll python</code> 改为 <code>pkg instll python2</code></p>
-<a id="more"></a>
-
 <h2 id="升级pip版本"><a href="#升级pip版本" class="headerlink" title="升级pip版本"></a>升级pip版本</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
 
 <p>对应的<code>python2</code> 为 </p>
@@ -272,8 +265,6 @@
 </ul>
 <hr>
 <h1 id="termux-的配置"><a href="#termux-的配置" class="headerlink" title="termux 的配置"></a>termux 的配置</h1><h2 id="更换清华源"><a href="#更换清华源" class="headerlink" title="更换清华源"></a>更换清华源</h2><p>官网源非常慢～ 如果可以忍受，不建议更换清华源</p>
-<a id="more"></a>
-
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">'s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/game.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/science.list</span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
 
 <h2 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h2><h3 id="pkg-命令介绍"><a href="#pkg-命令介绍" class="headerlink" title="pkg 命令介绍"></a>pkg 命令介绍</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg search &lt;query&gt;      <span class="comment">#搜索包 </span></span><br><span class="line">pkg install &lt;package&gt;   <span class="comment">#安装包 </span></span><br><span class="line">pkg uninstall &lt;package&gt; <span class="comment">#卸载包 </span></span><br><span class="line">pkg reinstall &lt;package&gt; <span class="comment">#重新安装包 </span></span><br><span class="line">pkg update              <span class="comment">#更新源 </span></span><br><span class="line">pkg upgrade             <span class="comment">#升级软件包 </span></span><br><span class="line">pkg list-all            <span class="comment">#列出可供安装的所有包 </span></span><br><span class="line">pkg list-installed      <span class="comment">#列出已经安装的包 </span></span><br><span class="line">pkg shoe &lt;package&gt;      <span class="comment">#显示某个包的详细信息 </span></span><br><span class="line">pkg files &lt;package&gt;     <span class="comment">#显示某个包的相关文件夹路径</span></span><br></pre></td></tr></table></figure>
