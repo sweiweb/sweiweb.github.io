@@ -103,6 +103,11 @@
 
 <p>主题支持的语言在目录 <code>./themes/ayer/languages/</code> 下查看</p>
 <h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>关于主题的更多细节配置，可以修改 <code>./themes/ayer/_config.yml</code> 文件， 可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出</p>
+<h1 id="hexo-插件"><a href="#hexo-插件" class="headerlink" title="hexo 插件"></a>hexo 插件</h1><ul>
+<li>音乐插件: <a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a></li>
+<li>电影插件: <a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">hexo-douban</a></li>
+<li>搜索插件: <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></li>
+</ul>
 <h1 id="hexo-数据迁移"><a href="#hexo-数据迁移" class="headerlink" title="hexo 数据迁移"></a>hexo 数据迁移</h1><p><strong>换电脑了怎么办？！</strong></p>
 <ol>
 <li><p>在新电脑安装 <code>hexo</code></p>
