@@ -1,144 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>利用termux在手机搭建博客</title>
-      <link href="/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装 <code>termux</code> 后，可以安装 <code>hexo</code>，在手机上搭建博客。</p><h1 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h1><p>输入以下命令即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pkg install nodejs</span><br><span class="line">pkg install git</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure><h2 id="初始化-hexo"><a href="#初始化-hexo" class="headerlink" title="初始化 hexo"></a>初始化 hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean  <span class="comment">#清除缓存</span></span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>此时，可在本机浏览器中输入<code>127.0.0.1:4000</code>查看效果</p><p>如果想在其他浏览器中搜索到自己的博客，可以在 <code>github</code> 上托管博客</p><h1 id="托管hexo博客"><a href="#托管hexo博客" class="headerlink" title="托管hexo博客"></a>托管hexo博客</h1><h2 id="创建-github-仓库"><a href="#创建-github-仓库" class="headerlink" title="创建 github 仓库"></a>创建 github 仓库</h2><p>首先登入 <a href="https://github.com/" target="_blank" rel="noopener">github</a>，在右上角<code>+</code>点击 <code>New repository</code> 创建一个仓库，在 <code>repository name</code> 中输入 <code>github账户名.github.io</code> ，同时勾选下方的<code>Public</code> (否则无法开启github pages)和 <code>Initialize this repository with a README</code></p><p><strong>github龟速？可同时同步至国内托管平台 <a href="https://gitee.com/" target="_blank" rel="noopener">gitee:https://gitee.com/</a></strong></p><h2 id="创建-gitee-仓库"><a href="#创建-gitee-仓库" class="headerlink" title="创建 gitee 仓库"></a>创建 gitee 仓库</h2><p>首先登入 <a href="https://gitee.com/" target="_blank" rel="noopener">gitee</a>，在右上角<code>+</code>点击 <code>新建仓库</code> ，在 <code>仓库名称</code> 栏中输入 <code>gitee账户名</code> ，勾选下方的<code>使用readme文件初始化这个仓库</code> ，点击<code>创建</code></p><ul><li>开启gitee pages</li></ul><p>进入仓库，在仓库的<code>服务</code> -&gt; <code>gitee pages</code> 中点击<code>创建</code>即可</p><h2 id="连接-hexo-和-git"><a href="#连接-hexo-和-git" class="headerlink" title="连接 hexo 和 git"></a>连接 hexo 和 git</h2><p>在终端输入命令设置用户名称和邮箱地址</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br></pre></td></tr></table></figure><p>使用 <code>ssh-keygen</code> 生成私钥和公钥</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure><p>注意查看输出信息的共钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容。</p><ul><li>github</li></ul><p>登录 <code>github</code>，点击右上角头像下的<code>settings</code>，点击 <code>SSH and GPG keys</code> 菜单下的 <code>New SSH key</code> 添加 <code>ssh</code>，将 <code>id_rsa.pub</code> 文件里的内容复制上去。随后，可以在终端输入命令 <code>ssh -T git@github.com</code> 测试添加 <code>ssh</code> 是否成功。</p><ul><li>gitee</li></ul><p>登录 <code>gitee</code>，点击右上角头像下的<code>设置</code>，点击 <code>SSH 公钥</code> 菜单， 将 <code>id_rsa.pub</code> 文件里的内容复制到 <code>公钥</code> 下方，点击<code>确定</code>。随后，可以在终端输入命令 <code>ssh -T git@gitee.com</code> 测试添加 <code>ssh</code> 是否成功。</p><h2 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h2><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code>打开文件，输入<code>i</code>进入编写状态，修改文件末尾的 <code>Deployment</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: </span><br><span class="line">   github: git@github.com:your&#x2F;name.github.io.git</span><br><span class="line">   gitee: git@gitee.com:your&#x2F;name.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>其中的 <code>repository</code> 可以在 <code>github</code> (<code>gitee</code>) 账户下 <code>your repositories</code> (仓库) 的 <code>clone or downlord</code> (<code>克隆/下载</code>) 中，选择 <code>Ues SSH</code> (<code>ssh</code>) 查看。修改完成后输入 <code>:wq</code> 保存并退出</p><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>首先尝试创建一个新文章，输入命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure><p>例如 <code>hexo new title</code> ， 随后会在目录下的 <code>./source/_post</code> 创建名为 <code>title.md</code> 的文件，可采用 <code>vi</code> 命令进入文件，输入<code>i</code>进入编写状态，编写好文章后输入 <code>:wq</code> 保存并退出，输入命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure><p><strong>需要注意的是，gitee 需要进入仓库的<code>服务</code> -&gt; <code>gitee pages</code>  中手动点击<code>更新</code></strong></p><p>至此，新文章就可以通过输入网站地址 <code>https://github账户.github.io</code> 或者 <code>https://gitee账户.gitee.io</code> 查看</p><h1 id="hexo-使用教程"><a href="#hexo-使用教程" class="headerlink" title="hexo 使用教程"></a>hexo 使用教程</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [模版layout] &lt;题目title&gt;</span><br></pre></td></tr></table></figure><p>通常情况下可直接输入 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &lt;title&gt;</span><br></pre></td></tr></table></figure><p> 随后会在目录下的 <code>./source/_post</code> 创建名为 <code>&lt;title&gt;.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出，开头格式可参考</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> ---</span><br><span class="line">title: &lt;title&gt;</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">tags:</span><br><span class="line">- tag1</span><br><span class="line">categories: </span><br><span class="line">- category1</span><br><span class="line">---</span><br></pre></td></tr></table></figure><h3 id="首次在文章中插入本地图片需要进行以下操作"><a href="#首次在文章中插入本地图片需要进行以下操作" class="headerlink" title="首次在文章中插入本地图片需要进行以下操作"></a>首次在文章中插入<strong>本地</strong>图片需要进行以下操作</h3><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code>，输入<code>i</code>进入编写状态，修改</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post<span class="emphasis">_asset_</span>folder: true</span><br></pre></td></tr></table></figure><p>安装插件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure><p>此时，输入 <code>hexo new &lt;title&gt;</code> ，会在<code>./source/_post</code> 目录下创建 <code>&lt;title&gt;.md</code> 文件和与之同名的 <code>&lt;title&gt;</code> 目录，将本地图片放入对应目录内，图片名称不做规范。最后，在想添加图片的<code>&lt;title&gt;.md</code> 文件的对应位置写入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述(可不填)](图片名称&quot;鼠标悬停文字(可不填)&quot;)&#96;</span><br></pre></td></tr></table></figure><p>如果添加网络图片，则不会占用本地资源，也不需要进行以上设置，对于网络图片可直接输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述(可不填)](图片链接地址&quot;鼠标悬停文字(可不填)&quot;)&#96;</span><br></pre></td></tr></table></figure><p>此外，还可以把图片存入 <code>markdown</code>文件</p><p>在 <code>python</code> 中输入</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line">f=open(<span class="string">'1.png'</span>,<span class="string">'rb'</span>) </span><br><span class="line">ls_f=base64.b64encode(f.read()) </span><br><span class="line">f.close()</span><br><span class="line">print(ls_f)</span><br></pre></td></tr></table></figure><p>将图片转化为 <code>base64</code> 字符串。之后在想添加图片的<code>&lt;title&gt;.md</code> 文件的对应位置写入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述(可不填)][base64str&quot;鼠标悬停文字(可不填)&quot;]</span><br></pre></td></tr></table></figure><p>最后把 <code>base64字符串</code> 放置在文章末尾</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[base64str]:data:image&#x2F;png;base64,iVBORw0......</span><br></pre></td></tr></table></figure><ul><li>如何通过 <code>base64字符串</code> 转换为图片？在 <code>python</code> 中输入以下命令</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line">bs=<span class="string">'iVBORw0KGgoAAAANSUhEUg....'</span> </span><br><span class="line">imgdata=base64.b64decode(bs)</span><br><span class="line">file=open(<span class="string">'1.png'</span>,<span class="string">'wb'</span>)</span><br><span class="line">file.write(imgdata)</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure><h2 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure><p>随后会在目录下的 <code>./source/categories</code> 创建名为 <code>index.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出，格式可参考</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>其中 <code>模版layout</code> 将匹配主题目录<code>./themes/yourthemes/layout</code> 下的 <code>.ejs</code> 文件，因号为内文件名</p><h2 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure><p>随后会在目录下的 <code>./source/tags</code> 创建名为 <code>index.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出，格式可参考</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><h2 id="修改模版"><a href="#修改模版" class="headerlink" title="修改模版"></a>修改模版</h2><p>在目录 <code>./blog/scaffolds/</code> 下可以修改<code>draft.md</code>，<code>page.md</code>，<code>post.md</code> 三种默认布局</p><h1 id="markdown-语法"><a href="#markdown-语法" class="headerlink" title="markdown 语法"></a>markdown 语法</h1><p><code>hexo</code> 的文章内容采用 <code>markdown</code> 语法，撰写的文章内容应基于 <code>markdown</code> ，基本语法请在<strong>1分钟</strong>内学会</p><h1 id="更改-hexo-主题"><a href="#更改-hexo-主题" class="headerlink" title="更改 hexo 主题"></a>更改 hexo 主题</h1><p>进入 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo 主题官网</a> 挑选合适的主题，这里以主题 <code>A-Ayer</code> 为例</p><p>点击主题下方链接进入下载页面</p><ul><li><a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">https://github.com/Shen-Yu/hexo-theme-ayer</a></li></ul><p>在网址内将给出安装方法</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: ayer</span><br></pre></td></tr></table></figure><p>此外，还可以修改语言</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure><p>主题支持的语言在目录 <code>./themes/ayer/languages/</code> 下查看</p><h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>关于主题的更多细节配置，可以修改 <code>./themes/ayer/_config.yml</code> 文件， 可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出</p><h1 id="hexo-插件"><a href="#hexo-插件" class="headerlink" title="hexo 插件"></a>hexo 插件</h1><ul><li>音乐插件: <a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a></li><li>电影插件: <a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">hexo-douban</a></li><li>搜索插件: <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></li></ul><h1 id="hexo-数据迁移"><a href="#hexo-数据迁移" class="headerlink" title="hexo 数据迁移"></a>hexo 数据迁移</h1><p><strong>换电脑了怎么办？！</strong></p><ul><li><p>在新电脑安装 <code>hexo</code></p></li><li><p>拷贝原来电脑的<code>./blog</code> 目录下的几个关键目录和文件至新电脑</p><ul><li>_config.yml</li><li>package.json</li><li>scaffolds/</li><li>source/</li><li>themes/</li></ul></li><li><p>进入新电脑博客目录 <code>./blog/</code>， 安装相关模块</p></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure><ul><li>添加新电脑密钥</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure><p>注意查看输出信息的公钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容。</p><ul><li><p>修改 <code>github</code> 和 <code>gitee</code> 平台的<code>ssh公钥</code></p></li><li><p>部署</p></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>利用termux在手机搭建博客</title>
+    <url>/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装 <code>termux</code> 后，可以安装 <code>hexo</code>，在手机上搭建博客。</p>
+<h1 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h1><p>输入以下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install nodejs</span><br><span class="line">pkg install git</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化-hexo"><a href="#初始化-hexo" class="headerlink" title="初始化 hexo"></a>初始化 hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean  <span class="comment">#清除缓存</span></span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>此时，可在本机浏览器中输入<code>127.0.0.1:4000</code>查看效果</p>
+<p>如果想在其他浏览器中搜索到自己的博客，可以在 <code>github</code> 上托管博客</p>
+<h1 id="托管hexo博客"><a href="#托管hexo博客" class="headerlink" title="托管hexo博客"></a>托管hexo博客</h1><h2 id="创建-github-仓库"><a href="#创建-github-仓库" class="headerlink" title="创建 github 仓库"></a>创建 github 仓库</h2><p>首先登入 <a href="https://github.com/" target="_blank" rel="noopener">github</a>，在右上角<code>+</code>点击 <code>New repository</code> 创建一个仓库，在 <code>repository name</code> 中输入 <code>github账户名.github.io</code> ，同时勾选下方的<code>Public</code> (否则无法开启github pages)和 <code>Initialize this repository with a README</code></p>
+<p><strong>github龟速？可同时同步至国内托管平台 <a href="https://gitee.com/" target="_blank" rel="noopener">gitee:https://gitee.com/</a></strong></p>
+<h2 id="创建-gitee-仓库"><a href="#创建-gitee-仓库" class="headerlink" title="创建 gitee 仓库"></a>创建 gitee 仓库</h2><p>首先登入 <a href="https://gitee.com/" target="_blank" rel="noopener">gitee</a>，在右上角<code>+</code>点击 <code>新建仓库</code> ，在 <code>仓库名称</code> 栏中输入 <code>gitee账户名</code> ，勾选下方的<code>使用readme文件初始化这个仓库</code> ，点击<code>创建</code></p>
+<ul>
+<li>开启gitee pages</li>
+</ul>
+<p>进入仓库，在仓库的<code>服务</code> -&gt; <code>gitee pages</code> 中点击<code>创建</code>即可</p>
+<h2 id="连接-hexo-和-git"><a href="#连接-hexo-和-git" class="headerlink" title="连接 hexo 和 git"></a>连接 hexo 和 git</h2><p>在终端输入命令设置用户名称和邮箱地址</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>ssh-keygen</code> 生成私钥和公钥</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<p>注意查看输出信息的共钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容。</p>
+<ul>
+<li>github</li>
+</ul>
+<p>登录 <code>github</code>，点击右上角头像下的<code>settings</code>，点击 <code>SSH and GPG keys</code> 菜单下的 <code>New SSH key</code> 添加 <code>ssh</code>，将 <code>id_rsa.pub</code> 文件里的内容复制上去。随后，可以在终端输入命令 <code>ssh -T git@github.com</code> 测试添加 <code>ssh</code> 是否成功。</p>
+<ul>
+<li>gitee</li>
+</ul>
+<p>登录 <code>gitee</code>，点击右上角头像下的<code>设置</code>，点击 <code>SSH 公钥</code> 菜单， 将 <code>id_rsa.pub</code> 文件里的内容复制到 <code>公钥</code> 下方，点击<code>确定</code>。随后，可以在终端输入命令 <code>ssh -T git@gitee.com</code> 测试添加 <code>ssh</code> 是否成功。</p>
+<h2 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h2><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code>打开文件，输入<code>i</code>进入编写状态，修改文件末尾的 <code>Deployment</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: </span><br><span class="line">   github: git@github.com:your&#x2F;name.github.io.git</span><br><span class="line">   gitee: git@gitee.com:your&#x2F;name.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>其中的 <code>repository</code> 可以在 <code>github</code> (<code>gitee</code>) 账户下 <code>your repositories</code> (仓库) 的 <code>clone or downlord</code> (<code>克隆/下载</code>) 中，选择 <code>Ues SSH</code> (<code>ssh</code>) 查看。修改完成后输入 <code>:wq</code> 保存并退出</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>首先尝试创建一个新文章，输入命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如 <code>hexo new title</code> ， 随后会在目录下的 <code>./source/_post</code> 创建名为 <code>title.md</code> 的文件，可采用 <code>vi</code> 命令进入文件，输入<code>i</code>进入编写状态，编写好文章后输入 <code>:wq</code> 保存并退出，输入命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p><strong>需要注意的是，gitee 需要进入仓库的<code>服务</code> -&gt; <code>gitee pages</code>  中手动点击<code>更新</code></strong></p>
+<p>至此，新文章就可以通过输入网站地址 <code>https://github账户.github.io</code> 或者 <code>https://gitee账户.gitee.io</code> 查看</p>
+<h1 id="hexo-使用教程"><a href="#hexo-使用教程" class="headerlink" title="hexo 使用教程"></a>hexo 使用教程</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [模版layout] &lt;题目title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>通常情况下可直接输入 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 随后会在目录下的 <code>./source/_post</code> 创建名为 <code>&lt;title&gt;.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出，开头格式可参考</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> ---</span><br><span class="line">title: &lt;title&gt;</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">tags:</span><br><span class="line">- tag1</span><br><span class="line">categories: </span><br><span class="line">- category1</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="首次在文章中插入本地图片需要进行以下操作"><a href="#首次在文章中插入本地图片需要进行以下操作" class="headerlink" title="首次在文章中插入本地图片需要进行以下操作"></a>首次在文章中插入<strong>本地</strong>图片需要进行以下操作</h3><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code>，输入<code>i</code>进入编写状态，修改</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">post<span class="emphasis">_asset_</span>folder: true</span><br></pre></td></tr></table></figure>
+<p>安装插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
+
+<p>此时，输入 <code>hexo new &lt;title&gt;</code> ，会在<code>./source/_post</code> 目录下创建 <code>&lt;title&gt;.md</code> 文件和与之同名的 <code>&lt;title&gt;</code> 目录，将本地图片放入对应目录内，图片名称不做规范。最后，在想添加图片的<code>&lt;title&gt;.md</code> 文件的对应位置写入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片描述(可不填)](图片名称&quot;鼠标悬停文字(可不填)&quot;)&#96;</span><br></pre></td></tr></table></figure>
+
+<p>如果添加网络图片，则不会占用本地资源，也不需要进行以上设置，对于网络图片可直接输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片描述(可不填)](图片链接地址&quot;鼠标悬停文字(可不填)&quot;)&#96;</span><br></pre></td></tr></table></figure>
+<p>此外，还可以把图片存入 <code>markdown</code>文件</p>
+<p>在 <code>python</code> 中输入</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line">f=open(<span class="string">'1.png'</span>,<span class="string">'rb'</span>) </span><br><span class="line">ls_f=base64.b64encode(f.read()) </span><br><span class="line">f.close()</span><br><span class="line">print(ls_f)</span><br></pre></td></tr></table></figure>
+
+<p>将图片转化为 <code>base64</code> 字符串。之后在想添加图片的<code>&lt;title&gt;.md</code> 文件的对应位置写入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片描述(可不填)][base64str&quot;鼠标悬停文字(可不填)&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>最后把 <code>base64字符串</code> 放置在文章末尾</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[base64str]:data:image&#x2F;png;base64,iVBORw0......</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如何通过 <code>base64字符串</code> 转换为图片？在 <code>python</code> 中输入以下命令</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line">bs=<span class="string">'iVBORw0KGgoAAAANSUhEUg....'</span> </span><br><span class="line">imgdata=base64.b64decode(bs)</span><br><span class="line">file=open(<span class="string">'1.png'</span>,<span class="string">'wb'</span>)</span><br><span class="line">file.write(imgdata)</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>随后会在目录下的 <code>./source/categories</code> 创建名为 <code>index.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出，格式可参考</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>其中 <code>模版layout</code> 将匹配主题目录<code>./themes/yourthemes/layout</code> 下的 <code>.ejs</code> 文件，因号为内文件名</p>
+<h2 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>随后会在目录下的 <code>./source/tags</code> 创建名为 <code>index.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出，格式可参考</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="修改模版"><a href="#修改模版" class="headerlink" title="修改模版"></a>修改模版</h2><p>在目录 <code>./blog/scaffolds/</code> 下可以修改<code>draft.md</code>，<code>page.md</code>，<code>post.md</code> 三种默认布局</p>
+<h1 id="markdown-语法"><a href="#markdown-语法" class="headerlink" title="markdown 语法"></a>markdown 语法</h1><p><code>hexo</code> 的文章内容采用 <code>markdown</code> 语法，撰写的文章内容应基于 <code>markdown</code> ，基本语法请在<strong>1分钟</strong>内学会</p>
+<h1 id="更改-hexo-主题"><a href="#更改-hexo-主题" class="headerlink" title="更改 hexo 主题"></a>更改 hexo 主题</h1><p>进入 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo 主题官网</a> 挑选合适的主题，这里以主题 <code>A-Ayer</code> 为例</p>
+<p>点击主题下方链接进入下载页面</p>
+<ul>
+<li><a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">https://github.com/Shen-Yu/hexo-theme-ayer</a></li>
+</ul>
+<p>在网址内将给出安装方法</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: ayer</span><br></pre></td></tr></table></figure>
+
+<p>此外，还可以修改语言</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure>
+
+<p>主题支持的语言在目录 <code>./themes/ayer/languages/</code> 下查看</p>
+<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>关于主题的更多细节配置，可以修改 <code>./themes/ayer/_config.yml</code> 文件， 可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出</p>
+<h1 id="hexo-插件"><a href="#hexo-插件" class="headerlink" title="hexo 插件"></a>hexo 插件</h1><ul>
+<li>音乐插件: <a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a></li>
+<li>电影插件: <a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">hexo-douban</a></li>
+<li>搜索插件: <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></li>
+</ul>
+<h1 id="hexo-数据迁移"><a href="#hexo-数据迁移" class="headerlink" title="hexo 数据迁移"></a>hexo 数据迁移</h1><p><strong>换电脑了怎么办？！</strong></p>
+<ul>
+<li><p>在新电脑安装 <code>hexo</code></p>
+</li>
+<li><p>拷贝原来电脑的<code>./blog</code> 目录下的几个关键目录和文件至新电脑</p>
+<ul>
+<li>_config.yml</li>
+<li>package.json</li>
+<li>scaffolds/</li>
+<li>source/</li>
+<li>themes/</li>
+</ul>
+</li>
+<li><p>进入新电脑博客目录 <code>./blog/</code>， 安装相关模块</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加新电脑密钥</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<p>注意查看输出信息的公钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容。</p>
+<ul>
+<li><p>修改 <code>github</code> 和 <code>gitee</code> 平台的<code>ssh公钥</code></p>
+</li>
+<li><p>部署</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
       <categories>
-          
-          <category> termux </category>
-          
+        <category>termux</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> termux </tag>
-            
-            <tag> hexo </tag>
-            
-            <tag> makedown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>利用termux搭建手机私有云</title>
-      <link href="/2020/03/23/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/"/>
-      <url>/2020/03/23/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/</url>
-      
-        <content type="html"><![CDATA[<p><code>filebrowser</code> 是一款远端文件浏览器，把服务部署在服务器上，只要保持连接设备与服务器间网络链接通畅，可以随时随地完成对文件和目录的管理操作，同时拥有上传和下载功能</p><h1 id="安装-filebrowser"><a href="#安装-filebrowser" class="headerlink" title="安装 filebrowser"></a>安装 filebrowser</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://filebrowser.xyz/get.sh | bash</span><br></pre></td></tr></table></figure><h2 id="启动命令"><a href="#启动命令" class="headerlink" title="启动命令"></a>启动命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filebrowser -a 0.0.0.0 -p 8000 -r /path/to/your/files</span><br></pre></td></tr></table></figure><p>这时候就可以在浏览器中输入<code>127.0.0.1:8000</code> 或者在局域网中输入 <code>ip:8000</code> 进行访问，默认用户名和密码均为<code>admin</code></p><p>但是，如果想通过公网在任何浏览器中进行访问，需要设置内网穿透，常用软件有<code>cpolar</code>，<code>Ngrok</code>，<code>frp</code>，这里重点说<code>cpolar</code>的用法。</p><h1 id="安装-cpolar"><a href="#安装-cpolar" class="headerlink" title="安装 cpolar"></a>安装 cpolar</h1><h2 id="安装-dnsutils-工具包"><a href="#安装-dnsutils-工具包" class="headerlink" title="安装 dnsutils 工具包"></a>安装 <code>dnsutils</code> 工具包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install dnsutils</span><br></pre></td></tr></table></figure><h2 id="下载-cpolar-客户端"><a href="#下载-cpolar-客户端" class="headerlink" title="下载 cpolar 客户端"></a>下载 cpolar 客户端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -O -L https://www.cpolar.com/static/downloads/cpolar-stable-linux-arm.zip</span><br><span class="line">unzip cpolar-stable-linux-arm.zip</span><br></pre></td></tr></table></figure><h2 id="认证-token-值"><a href="#认证-token-值" class="headerlink" title="认证 token 值"></a>认证 token 值</h2><p>访问 <a href="https://www.cpolar.com" target="_blank" rel="noopener">cpolar 官网</a>注册账号，进入<code>仪表盘</code>的<code>验证</code>菜单，复制<code>token</code>值，在终端输入命令进行认证</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./cpolar authtoken xxxxxxxxxxxxxxxxxx</span><br></pre></td></tr></table></figure><h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./cpolar http 8080</span><br></pre></td></tr></table></figure><h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1><h2 id="frp-的安装"><a href="#frp-的安装" class="headerlink" title="frp 的安装"></a>frp 的安装</h2><p>另外再介绍一下<code>frp</code>，</p><p>下载地址</p><p><a href="https://github.com/cloudswave/termux-script/tree/master/frpc" target="_blank" rel="noopener">https://github.com/cloudswave/termux-script/tree/master/frpc</a></p><p>终端解压和执行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf frp_0.19.0_linux_arm.tar.gz</span><br><span class="line">basepath=$(<span class="built_in">cd</span> `dirname <span class="variable">$0</span>`; <span class="built_in">pwd</span>)</span><br><span class="line">ln -s <span class="variable">$basepath</span> ~/</span><br><span class="line"><span class="built_in">cd</span> ~/frpc/</span><br><span class="line">./frpc -c frpc.ini</span><br></pre></td></tr></table></figure><p>执行前,需要编辑配置文件 <code>frpc.ini</code>,对于该文件的配置，请参考<a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank" rel="noopener">官方说明文档</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>termux</tag>
+        <tag>hexo</tag>
+        <tag>makedown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用termux搭建手机私有云</title>
+    <url>/2020/03/23/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/</url>
+    <content><![CDATA[<p><code>filebrowser</code> 是一款远端文件浏览器，把服务部署在服务器上，只要保持连接设备与服务器间网络链接通畅，可以随时随地完成对文件和目录的管理操作，同时拥有上传和下载功能</p>
+<h1 id="安装-filebrowser"><a href="#安装-filebrowser" class="headerlink" title="安装 filebrowser"></a>安装 filebrowser</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://filebrowser.xyz/get.sh | bash</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动命令"><a href="#启动命令" class="headerlink" title="启动命令"></a>启动命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">filebrowser -a 0.0.0.0 -p 8000 -r /path/to/your/files</span><br></pre></td></tr></table></figure>
+
+<p>这时候就可以在浏览器中输入<code>127.0.0.1:8000</code> 或者在局域网中输入 <code>ip:8000</code> 进行访问，默认用户名和密码均为<code>admin</code></p>
+<p>但是，如果想通过公网在任何浏览器中进行访问，需要设置内网穿透，常用软件有<code>cpolar</code>，<code>Ngrok</code>，<code>frp</code>，这里重点说<code>cpolar</code>的用法。</p>
+<h1 id="安装-cpolar"><a href="#安装-cpolar" class="headerlink" title="安装 cpolar"></a>安装 cpolar</h1><h2 id="安装-dnsutils-工具包"><a href="#安装-dnsutils-工具包" class="headerlink" title="安装 dnsutils 工具包"></a>安装 <code>dnsutils</code> 工具包</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install dnsutils</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载-cpolar-客户端"><a href="#下载-cpolar-客户端" class="headerlink" title="下载 cpolar 客户端"></a>下载 cpolar 客户端</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -O -L https://www.cpolar.com/static/downloads/cpolar-stable-linux-arm.zip</span><br><span class="line">unzip cpolar-stable-linux-arm.zip</span><br></pre></td></tr></table></figure>
+
+<h2 id="认证-token-值"><a href="#认证-token-值" class="headerlink" title="认证 token 值"></a>认证 token 值</h2><p>访问 <a href="https://www.cpolar.com" target="_blank" rel="noopener">cpolar 官网</a>注册账号，进入<code>仪表盘</code>的<code>验证</code>菜单，复制<code>token</code>值，在终端输入命令进行认证</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./cpolar authtoken xxxxxxxxxxxxxxxxxx</span><br></pre></td></tr></table></figure>
+
+<h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./cpolar http 8080</span><br></pre></td></tr></table></figure>
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1><h2 id="frp-的安装"><a href="#frp-的安装" class="headerlink" title="frp 的安装"></a>frp 的安装</h2><p>另外再介绍一下<code>frp</code>，</p>
+<p>下载地址</p>
+<p><a href="https://github.com/cloudswave/termux-script/tree/master/frpc" target="_blank" rel="noopener">https://github.com/cloudswave/termux-script/tree/master/frpc</a></p>
+<p>终端解压和执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf frp_0.19.0_linux_arm.tar.gz</span><br><span class="line">basepath=$(<span class="built_in">cd</span> `dirname <span class="variable">$0</span>`; <span class="built_in">pwd</span>)</span><br><span class="line">ln -s <span class="variable">$basepath</span> ~/</span><br><span class="line"><span class="built_in">cd</span> ~/frpc/</span><br><span class="line">./frpc -c frpc.ini</span><br></pre></td></tr></table></figure>
+
+<p>执行前,需要编辑配置文件 <code>frpc.ini</code>,对于该文件的配置，请参考<a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank" rel="noopener">官方说明文档</a></p>
+]]></content>
       <categories>
-          
-          <category> termux </category>
-          
+        <category>termux</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> termux </tag>
-            
-            <tag> filebrowser </tag>
-            
-            <tag> cpolar </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>在termux上安装octave</title>
-      <link href="/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/"/>
-      <url>/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/</url>
-      
-        <content type="html"><![CDATA[<p>手机借助 <code>termux</code> 安装 <code>octave</code> ，可在手机实现科学计算</p><h1 id="添加-GNU-软件源"><a href="#添加-GNU-软件源" class="headerlink" title="添加 GNU 软件源"></a>添加 GNU 软件源</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install curl gnupg</span><br><span class="line">curl -LO https://its-pointless.github.io/setup-pointless-repo.sh </span><br><span class="line">bash setup-pointless-repo.sh</span><br></pre></td></tr></table></figure><p>如果不成功，换用</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p <span class="string">"<span class="variable">$PREFIX</span>/etc/apt/sources.list.d/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb https://its-pointless.github.io/files/ termux extras"</span> &gt; <span class="string">"<span class="variable">$PREFIX</span>/etc/apt/sources.list.d/pointless.list"</span></span><br><span class="line">curl <span class="string">"https://its-pointless.github.io/pointless.gpg"</span> | apt-key add</span><br></pre></td></tr></table></figure><h1 id="安装-octave"><a href="#安装-octave" class="headerlink" title="安装 octave"></a>安装 octave</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install octave</span><br></pre></td></tr></table></figure><p>如果想让 <code>octave</code> 链接 <code>jupyter</code> ， 安装内核</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install octave-kernel</span><br></pre></td></tr></table></figure><h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
-      
-      
+      <tags>
+        <tag>termux</tag>
+        <tag>filebrowser</tag>
+        <tag>cpolar</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在termux上安装octave</title>
+    <url>/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/</url>
+    <content><![CDATA[<p>手机借助 <code>termux</code> 安装 <code>octave</code> ，可在手机实现科学计算</p>
+<h1 id="添加-GNU-软件源"><a href="#添加-GNU-软件源" class="headerlink" title="添加 GNU 软件源"></a>添加 GNU 软件源</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install curl gnupg</span><br><span class="line">curl -LO https://its-pointless.github.io/setup-pointless-repo.sh </span><br><span class="line">bash setup-pointless-repo.sh</span><br></pre></td></tr></table></figure>
+
+<p>如果不成功，换用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p <span class="string">"<span class="variable">$PREFIX</span>/etc/apt/sources.list.d/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb https://its-pointless.github.io/files/ termux extras"</span> &gt; <span class="string">"<span class="variable">$PREFIX</span>/etc/apt/sources.list.d/pointless.list"</span></span><br><span class="line">curl <span class="string">"https://its-pointless.github.io/pointless.gpg"</span> | apt-key add</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装-octave"><a href="#安装-octave" class="headerlink" title="安装 octave"></a>安装 octave</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install octave</span><br></pre></td></tr></table></figure>
+
+<p>如果想让 <code>octave</code> 链接 <code>jupyter</code> ， 安装内核</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install octave-kernel</span><br></pre></td></tr></table></figure>
+
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
-          
-          <category> termux </category>
-          
+        <category>termux</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> termux </tag>
-            
-            <tag> octave </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>在termux上安装python</title>
-      <link href="/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/"/>
-      <url>/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/</url>
-      
-        <content type="html"><![CDATA[<p>通过termux可以将python 安装到手机上，随身查看并编写脚本</p><h1 id="安装-python"><a href="#安装-python" class="headerlink" title="安装 python"></a>安装 python</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg instll python</span><br></pre></td></tr></table></figure><p>如果安装 <code>python2</code> ,将命令<code>pkg instll python</code> 改为 <code>pkg instll python2</code></p><h2 id="升级pip版本"><a href="#升级pip版本" class="headerlink" title="升级pip版本"></a>升级pip版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure><p>对应的<code>python2</code> 为 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 -m pip install --upgrade pip</span><br></pre></td></tr></table></figure><h2 id="安装-ipython"><a href="#安装-ipython" class="headerlink" title="安装 ipython"></a>安装 ipython</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install clang</span><br><span class="line">pip install ipython</span><br><span class="line">pip3.6 install ipython</span><br></pre></td></tr></table></figure><h2 id="优化vim"><a href="#优化vim" class="headerlink" title="优化vim"></a>优化vim</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install vim-python</span><br></pre></td></tr></table></figure><h2 id="安装科学计算包"><a href="#安装科学计算包" class="headerlink" title="安装科学计算包"></a>安装科学计算包</h2><ul><li><code>jupyter</code></li><li><code>numpy</code></li><li><code>matplotlib</code></li></ul><h3 id="首先安装依赖"><a href="#首先安装依赖" class="headerlink" title="首先安装依赖"></a>首先安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install python python-dev clang fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config</span><br></pre></td></tr></table></figure><p>有些 <code>-dev</code> 可能会安装失败， 这没问题～ 继续</p><h3 id="安装-jupyter"><a href="#安装-jupyter" class="headerlink" title="安装 jupyter"></a>安装 jupyter</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install jupyter</span><br></pre></td></tr></table></figure><h4 id="juypter-默认文件配置"><a href="#juypter-默认文件配置" class="headerlink" title="juypter 默认文件配置"></a>juypter 默认文件配置</h4><p>创建密码</p><p>终端输入 <code>ipython</code> 启动，随后依次输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from notebook.auth import passwd</span><br><span class="line">passwd()</span><br></pre></td></tr></table></figure><p>创建密码并确认后记录<code>sha1</code>秘钥值，如 <code>&#39;sha1:XXXXXXX&#39;</code></p><p>生成默认配置文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure><p>在生成的 <code>./.jupyter/jupyter_notebook_config.py</code> 配置文件中，采用命令 <code>vi .jupyter/jupyter_notebook_config.py</code> 进入文件，按<code>i</code>进入编辑状态修改以下几项内容</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.allow_remote_access = True</span><br><span class="line">c.NotebookApp.ip = <span class="string">'*'</span></span><br><span class="line">c.NotebookApp.port = 8000</span><br><span class="line">c.NotebookApp.password = u<span class="string">'sha1:XXXXXXX'</span></span><br></pre></td></tr></table></figure><p>输入 <code>:wq</code> 保存并退出，启动 <code>jupyter</code> </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure><p>随后可在本机浏览器中输入 <code>127.0.0.1：8000</code> 或局域网中输入 <code>ip:8000</code> 打开</p><h3 id="安装-numpy"><a href="#安装-numpy" class="headerlink" title="安装 numpy"></a>安装 numpy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install numpy</span><br></pre></td></tr></table></figure><h3 id="安装-matplotlib"><a href="#安装-matplotlib" class="headerlink" title="安装 matplotlib"></a>安装 matplotlib</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install matplotlib</span><br></pre></td></tr></table></figure><p>注意 <code>numpy</code> 是 <code>matplotlib</code> 的依赖包， 二者不能同时安装</p><h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
-      
-      
+      <tags>
+        <tag>termux</tag>
+        <tag>octave</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在termux上安装python</title>
+    <url>/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/</url>
+    <content><![CDATA[<p>通过termux可以将python 安装到手机上，随身查看并编写脚本</p>
+<h1 id="安装-python"><a href="#安装-python" class="headerlink" title="安装 python"></a>安装 python</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg instll python</span><br></pre></td></tr></table></figure>
+
+<p>如果安装 <code>python2</code> ,将命令<code>pkg instll python</code> 改为 <code>pkg instll python2</code></p>
+<h2 id="升级pip版本"><a href="#升级pip版本" class="headerlink" title="升级pip版本"></a>升级pip版本</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+<p>对应的<code>python2</code> 为 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python2 -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-ipython"><a href="#安装-ipython" class="headerlink" title="安装 ipython"></a>安装 ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install clang</span><br><span class="line">pip install ipython</span><br><span class="line">pip3.6 install ipython</span><br></pre></td></tr></table></figure>
+
+<h2 id="优化vim"><a href="#优化vim" class="headerlink" title="优化vim"></a>优化vim</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install vim-python</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装科学计算包"><a href="#安装科学计算包" class="headerlink" title="安装科学计算包"></a>安装科学计算包</h2><ul>
+<li><code>jupyter</code></li>
+<li><code>numpy</code></li>
+<li><code>matplotlib</code></li>
+</ul>
+<h3 id="首先安装依赖"><a href="#首先安装依赖" class="headerlink" title="首先安装依赖"></a>首先安装依赖</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install python python-dev clang fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config</span><br></pre></td></tr></table></figure>
+<p>有些 <code>-dev</code> 可能会安装失败， 这没问题～ 继续</p>
+<h3 id="安装-jupyter"><a href="#安装-jupyter" class="headerlink" title="安装 jupyter"></a>安装 jupyter</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install jupyter</span><br></pre></td></tr></table></figure>
+<h4 id="juypter-默认文件配置"><a href="#juypter-默认文件配置" class="headerlink" title="juypter 默认文件配置"></a>juypter 默认文件配置</h4><p>创建密码</p>
+<p>终端输入 <code>ipython</code> 启动，随后依次输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">from notebook.auth import passwd</span><br><span class="line">passwd()</span><br></pre></td></tr></table></figure>
+
+<p>创建密码并确认后记录<code>sha1</code>秘钥值，如 <code>&#39;sha1:XXXXXXX&#39;</code></p>
+<p>生成默认配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+
+<p>在生成的 <code>./.jupyter/jupyter_notebook_config.py</code> 配置文件中，采用命令 <code>vi .jupyter/jupyter_notebook_config.py</code> 进入文件，按<code>i</code>进入编辑状态修改以下几项内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">c.NotebookApp.allow_remote_access = True</span><br><span class="line">c.NotebookApp.ip = <span class="string">'*'</span></span><br><span class="line">c.NotebookApp.port = 8000</span><br><span class="line">c.NotebookApp.password = u<span class="string">'sha1:XXXXXXX'</span></span><br></pre></td></tr></table></figure>
+
+<p>输入 <code>:wq</code> 保存并退出，启动 <code>jupyter</code> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>随后可在本机浏览器中输入 <code>127.0.0.1：8000</code> 或局域网中输入 <code>ip:8000</code> 打开</p>
+<h3 id="安装-numpy"><a href="#安装-numpy" class="headerlink" title="安装 numpy"></a>安装 numpy</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install numpy</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-matplotlib"><a href="#安装-matplotlib" class="headerlink" title="安装 matplotlib"></a>安装 matplotlib</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install matplotlib</span><br></pre></td></tr></table></figure>
+<p>注意 <code>numpy</code> 是 <code>matplotlib</code> 的依赖包， 二者不能同时安装</p>
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
-          
-          <category> termux </category>
-          
+        <category>termux</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> termux </tag>
-            
-            <tag> python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>termux的安装及配置</title>
-      <link href="/2020/03/22/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/"/>
-      <url>/2020/03/22/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</url>
-      
-        <content type="html"><![CDATA[<h1 id="termux-的安装"><a href="#termux-的安装" class="headerlink" title="termux 的安装"></a>termux 的安装</h1><p>下载地址</p><ul><li><a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener">https://f-droid.org/packages/com.termux/</a></li></ul><hr><h1 id="termux-的配置"><a href="#termux-的配置" class="headerlink" title="termux 的配置"></a>termux 的配置</h1><h2 id="更换清华源"><a href="#更换清华源" class="headerlink" title="更换清华源"></a>更换清华源</h2><p>官网源非常慢～ 如果可以忍受，不建议更换清华源</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/game.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/science.list</span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure><h2 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h2><h3 id="pkg-命令介绍"><a href="#pkg-命令介绍" class="headerlink" title="pkg 命令介绍"></a>pkg 命令介绍</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pkg search &lt;query&gt;      <span class="comment">#搜索包 </span></span><br><span class="line">pkg install &lt;package&gt;   <span class="comment">#安装包 </span></span><br><span class="line">pkg uninstall &lt;package&gt; <span class="comment">#卸载包 </span></span><br><span class="line">pkg reinstall &lt;package&gt; <span class="comment">#重新安装包 </span></span><br><span class="line">pkg update              <span class="comment">#更新源 </span></span><br><span class="line">pkg upgrade             <span class="comment">#升级软件包 </span></span><br><span class="line">pkg list-all            <span class="comment">#列出可供安装的所有包 </span></span><br><span class="line">pkg list-installed      <span class="comment">#列出已经安装的包 </span></span><br><span class="line">pkg shoe &lt;package&gt;      <span class="comment">#显示某个包的详细信息 </span></span><br><span class="line">pkg files &lt;package&gt;     <span class="comment">#显示某个包的相关文件夹路径</span></span><br></pre></td></tr></table></figure><h3 id="安装常用包"><a href="#安装常用包" class="headerlink" title="安装常用包"></a>安装常用包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install vim curl wget git unzip unrar</span><br></pre></td></tr></table></figure><h3 id="解决-vim-汉字乱码"><a href="#解决-vim-汉字乱码" class="headerlink" title="解决 vim 汉字乱码"></a>解决 vim 汉字乱码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim .vimrc</span><br></pre></td></tr></table></figure><p>输入<code>i</code>进入编辑，添加以下内容</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1</span><br><span class="line"><span class="built_in">set</span> enc=utf8</span><br><span class="line"><span class="built_in">set</span> fencs=utf8,gbk,gb2312,gb18030</span><br></pre></td></tr></table></figure><p>输入<code>:wq</code>保存并退出，最后 <code>source</code> 下变量</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> .vimrc</span><br></pre></td></tr></table></figure><h3 id="安装-SSH-服务"><a href="#安装-SSH-服务" class="headerlink" title="安装 SSH 服务"></a>安装 SSH 服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure><p>查询手机ip</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure><p>查询当前用户</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whoami</span><br></pre></td></tr></table></figure><p>确认ssh监听端口</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp | grep sshd</span><br></pre></td></tr></table></figure><p>需要注意的是，<code>ssh</code> 需要手动开启， 开启命令为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshd</span><br></pre></td></tr></table></figure><p>如果需要，可加入到<code>~/.bashrc</code> 中自动启动，使用<code>vim ~/.bashrc</code>进入文件，输入<code>i</code>开始编辑,添加</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> sshd</span><br></pre></td></tr></table></figure><p>最后输入<code>:wq</code>保存并退出，重启即可生效</p><h2 id="更改欢迎语"><a href="#更改欢迎语" class="headerlink" title="更改欢迎语"></a>更改欢迎语</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="variable">$PREFIX</span>/etc/motd</span><br></pre></td></tr></table></figure><h2 id="授予访问本机存储权限"><a href="#授予访问本机存储权限" class="headerlink" title="授予访问本机存储权限"></a>授予访问本机存储权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure><h2 id="创建软链接"><a href="#创建软链接" class="headerlink" title="创建软链接"></a>创建软链接</h2><p>以 QQ 为例</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /data/data/com.termux/files/home/storage/shared/tencent/QQfile_recv QQ</span><br></pre></td></tr></table></figure><h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
-      
-      
+      <tags>
+        <tag>termux</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>termux的安装及配置</title>
+    <url>/2020/03/22/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="termux-的安装"><a href="#termux-的安装" class="headerlink" title="termux 的安装"></a>termux 的安装</h1><p>下载地址</p>
+<ul>
+<li><a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener">https://f-droid.org/packages/com.termux/</a></li>
+</ul>
+<hr>
+<h1 id="termux-的配置"><a href="#termux-的配置" class="headerlink" title="termux 的配置"></a>termux 的配置</h1><h2 id="更换清华源"><a href="#更换清华源" class="headerlink" title="更换清华源"></a>更换清华源</h2><p>官网源非常慢～ 如果可以忍受，不建议更换清华源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">'s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/game.list</span><br><span class="line">sed -i <span class="string">'s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/science.list</span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h2><h3 id="pkg-命令介绍"><a href="#pkg-命令介绍" class="headerlink" title="pkg 命令介绍"></a>pkg 命令介绍</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg search &lt;query&gt;      <span class="comment">#搜索包 </span></span><br><span class="line">pkg install &lt;package&gt;   <span class="comment">#安装包 </span></span><br><span class="line">pkg uninstall &lt;package&gt; <span class="comment">#卸载包 </span></span><br><span class="line">pkg reinstall &lt;package&gt; <span class="comment">#重新安装包 </span></span><br><span class="line">pkg update              <span class="comment">#更新源 </span></span><br><span class="line">pkg upgrade             <span class="comment">#升级软件包 </span></span><br><span class="line">pkg list-all            <span class="comment">#列出可供安装的所有包 </span></span><br><span class="line">pkg list-installed      <span class="comment">#列出已经安装的包 </span></span><br><span class="line">pkg shoe &lt;package&gt;      <span class="comment">#显示某个包的详细信息 </span></span><br><span class="line">pkg files &lt;package&gt;     <span class="comment">#显示某个包的相关文件夹路径</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装常用包"><a href="#安装常用包" class="headerlink" title="安装常用包"></a>安装常用包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install vim curl wget git unzip unrar</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决-vim-汉字乱码"><a href="#解决-vim-汉字乱码" class="headerlink" title="解决 vim 汉字乱码"></a>解决 vim 汉字乱码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim .vimrc</span><br></pre></td></tr></table></figure>
+
+<p>输入<code>i</code>进入编辑，添加以下内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1</span><br><span class="line"><span class="built_in">set</span> enc=utf8</span><br><span class="line"><span class="built_in">set</span> fencs=utf8,gbk,gb2312,gb18030</span><br></pre></td></tr></table></figure>
+
+<p>输入<code>:wq</code>保存并退出，最后 <code>source</code> 下变量</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> .vimrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-SSH-服务"><a href="#安装-SSH-服务" class="headerlink" title="安装 SSH 服务"></a>安装 SSH 服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install openssh</span><br></pre></td></tr></table></figure>
+
+<p>查询手机ip</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+
+<p>查询当前用户</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">whoami</span><br></pre></td></tr></table></figure>
+
+<p>确认ssh监听端口</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ntlp | grep sshd</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，<code>ssh</code> 需要手动开启， 开启命令为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sshd</span><br></pre></td></tr></table></figure>
+
+<p>如果需要，可加入到<code>~/.bashrc</code> 中自动启动，使用<code>vim ~/.bashrc</code>进入文件，输入<code>i</code>开始编辑,添加</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> sshd</span><br></pre></td></tr></table></figure>
+
+<p>最后输入<code>:wq</code>保存并退出，重启即可生效</p>
+<h2 id="更改欢迎语"><a href="#更改欢迎语" class="headerlink" title="更改欢迎语"></a>更改欢迎语</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim <span class="variable">$PREFIX</span>/etc/motd</span><br></pre></td></tr></table></figure>
+
+<h2 id="授予访问本机存储权限"><a href="#授予访问本机存储权限" class="headerlink" title="授予访问本机存储权限"></a>授予访问本机存储权限</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建软链接"><a href="#创建软链接" class="headerlink" title="创建软链接"></a>创建软链接</h2><p>以 QQ 为例</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /data/data/com.termux/files/home/storage/shared/tencent/QQfile_recv QQ</span><br></pre></td></tr></table></figure>
+
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
-          
-          <category> termux </category>
-          
+        <category>termux</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> termux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>termux</tag>
+      </tags>
+  </entry>
 </search>
