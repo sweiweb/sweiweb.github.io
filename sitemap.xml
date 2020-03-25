@@ -4,7 +4,14 @@
   <url>
     <loc>http://yoursite.com/movies/index.html</loc>
     
-    <lastmod>2020-03-25T05:26:45.030Z</lastmod>
+    <lastmod>2020-03-25T05:49:07.340Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    
+    <lastmod>2020-03-25T05:44:12.330Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2020-03-25T02:16:46.420Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    
-    <lastmod>2020-03-24T15:59:33.440Z</lastmod>
     
   </url>
   
