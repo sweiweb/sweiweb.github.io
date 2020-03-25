@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/03/25/%E8%AF%97%E6%96%87%E7%BB%9D%E5%8F%A5/</loc>
+    
+    <lastmod>2020-03-25T15:35:23.340Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/25/HTML%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
+    
+    <lastmod>2020-03-25T15:34:05.510Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    
+    <lastmod>2020-03-25T13:47:19.400Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/music/index.html</loc>
     
     <lastmod>2020-03-25T09:03:12.330Z</lastmod>
@@ -33,13 +54,6 @@
     <loc>http://yoursite.com/2020/03/22/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2020-03-25T08:06:28.370Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    
-    <lastmod>2020-03-25T08:05:21.380Z</lastmod>
     
   </url>
   
