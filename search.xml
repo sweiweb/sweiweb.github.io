@@ -6,12 +6,9 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
 <p>HTML（HyperText Mark-up Language）是一种制作万维网页面的标准语言，它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。</p>
 </blockquote>
-<h1 id="改变字体格式"><a href="#改变字体格式" class="headerlink" title="改变字体格式"></a>改变字体格式</h1><h2 id="lt-font-gt-字体标签"><a href="#lt-font-gt-字体标签" class="headerlink" title="&lt;font&gt; 字体标签"></a><code>&lt;font&gt;</code> 字体标签</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">"4"</span> <span class="attr">face</span>=<span class="string">"Times"</span> <span class="attr">color</span>=<span class="string">"red"</span>&gt;</span></span><br><span class="line">This is a paragraph.</span><br><span class="line"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="改变字体格式"><a href="#改变字体格式" class="headerlink" title="改变字体格式"></a>改变字体格式</h1><h2 id="lt-font-gt-字体标签"><a href="#lt-font-gt-字体标签" class="headerlink" title="&lt;font&gt; 字体标签"></a><code>&lt;font&gt;</code> 字体标签</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span>&gt;</span>这是一段话，</span><br><span class="line">  <span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">"+3"</span> <span class="attr">color</span>=<span class="string">"red"</span>&gt;</span>这是我的重点<span class="tag">&lt;/<span class="name">font</span>&gt;</span>，请不要忽略</span><br><span class="line"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>效果：</p>
-<font size="4" face="Times" color="red">
-This is a paragraph.
-</font>
-
+<p><font>这是一段话，<br>  <font size="+3" color="red">这是我的重点</font>，请不要忽略<br></font></p>
 <ul>
 <li>字体属性</li>
 </ul>
@@ -146,8 +143,8 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
     <title>诗词之美</title>
     <url>/%E8%AF%97%E8%AF%8D%E4%B9%8B%E7%BE%8E/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><div style="text-align:center;margin-top:20px">
-<p style="font-size:25px;font-weight:bold;font-family:黑体">题龙阳县青草湖</p>
-<p style="font-size:15px;">作者：唐珙</p>
+<p style="font-size:160%;font-weight:bold;font-family:黑体">题龙阳县青草湖</p>
+<p style="font-size:80%;">作者：唐珙</p>
 <p>西风吹老洞庭波，一夜湘君白发多。</p>
 <p>醉后不知天在水，满船清梦压星河。</p>
 </div>
