@@ -1003,9 +1003,9 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
         <category>termux教程</category>
       </categories>
       <tags>
-        <tag>termux</tag>
         <tag>博客</tag>
         <tag>hexo</tag>
+        <tag>termux</tag>
       </tags>
   </entry>
   <entry>
