@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>HTML常用语法</title>
-    <url>/HTML%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
+    <url>/html_syntax/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
 <p>HTML（HyperText Mark-up Language）是一种制作万维网页面的标准语言，它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。</p>
 </blockquote>
@@ -120,7 +120,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
     <img src="/" width="100" height="120" alt="这是个图片" class="lazyload" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1560174281,618449280&fm=26&gp=0.jpg">
   </div>   <!-- 图片标签 -->
   <div style="overflow:auto; margin-left:120px"> <!--这是第二个包含文本的 div -->
-    <p><a href="https://sweiweb.gitee.io/" target="_blank" rel="noopener">这是个超链接</a>  <!-- 超链接标签 -->
+    <p><a href="https://sweiweb.gitee.io/">这是个超链接</a>  <!-- 超链接标签 -->
     </p>
     <p>右侧文本</p>
     <p style="line-height:12px;font-size:14px">右侧文本</p>
@@ -144,7 +144,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
   </entry>
   <entry>
     <title>诗词之美</title>
-    <url>/%E8%AF%97%E8%AF%8D%E4%B9%8B%E7%BE%8E/</url>
+    <url>/poems/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><div style="text-align:center;margin-top:20px;font-size:120%">
 <p style="font-size:180%;font-weight:bold;font-family:微软雅黑">题龙阳县青草湖</p>
 <p style="font-size:90%;">作者：唐珙</p>
@@ -1083,7 +1083,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
   </entry>
   <entry>
     <title>实用网址收录</title>
-    <url>/%E5%AE%9E%E7%94%A8%E7%BD%91%E5%9D%80%E6%94%B6%E5%BD%95/</url>
+    <url>/url_address/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="高清图片素材"><a href="#高清图片素材" class="headerlink" title="高清图片素材"></a>高清图片素材</h1><ul>
 <li><a href="http://www.jj20.com/" target="_blank" rel="noopener">娟娟壁纸 : http://www.jj20.com/</a></li>
 </ul>
@@ -1104,10 +1104,10 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
   </entry>
   <entry>
     <title>利用termux在手机搭建博客</title>
-    <url>/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <url>/build_blog/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>安装 <code>termux</code> 后，可以安装 <code>hexo</code>，<strong>在手机上随时更新博客</strong>。</p>
 <ul>
-<li>对于有些文章手机不好编辑？可以在手机安装 <code>jupyter</code>，实现通过浏览器对手机文件进行在线编辑。安装方法请参见 <a href="/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/" title="在termux上安装python">在termux上安装python</a> 的 <code>jupyter</code> 部分。或者直接在电脑安装 <code>hexo</code></li>
+<li>对于有些文章手机不好编辑？可以在手机安装 <code>jupyter</code>，实现通过浏览器对手机文件进行在线编辑。安装方法请参见 <a href="/install_python/" title="在termux上安装python">在termux上安装python</a> 的 <code>jupyter</code> 部分。或者直接在电脑安装 <code>hexo</code></li>
 </ul>
 <blockquote>
 <p><code>Jupyter Notebook</code> 是一个交互式笔记本，便于创建和共享文学化程序文档。除此之外，还支持视频、图片、PPT的在线观看</p>
@@ -1154,6 +1154,18 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p><strong>需要注意的是，gitee 需要进入仓库的<code>服务</code> -&gt; <code>gitee pages</code>  中手动点击<code>更新</code></strong></p>
 <p>至此，新文章就可以通过输入网站地址 <code>https://github账户.github.io</code> 或者 <code>https://gitee账户.gitee.io</code> 查看</p>
 <hr>
+<h2 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h2><h3 id="更改-blog-config-yml-文件"><a href="#更改-blog-config-yml-文件" class="headerlink" title="更改 blog/_config.yml 文件"></a>更改 <code>blog/_config.yml</code> 文件</h3><p>有以下几项需要修改，例如</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: &#39;何事？&#39;</span><br><span class="line">author: &quot;孙 伟&quot;</span><br><span class="line">language: zh-CN</span><br><span class="line">url: https:&#x2F;&#x2F;sweiweb.github.io&#x2F;</span><br><span class="line">permalink: :urlname&#x2F;   # 文章链接，默认的链接地址非常长，并会出现中文转码的情况</span><br><span class="line">skip_render:</span><br><span class="line">  - README.md       # 每次更新忽略的文件</span><br><span class="line">theme: Butterfly</span><br></pre></td></tr></table></figure>
+
+<h3 id="更改blog-scaffolds目录下的模版文件"><a href="#更改blog-scaffolds目录下的模版文件" class="headerlink" title="更改blog/scaffolds目录下的模版文件"></a>更改<code>blog/scaffolds</code>目录下的模版文件</h3><p>./draft.md </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>./page.md</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">type: &#123;&#123; title &#125;&#125;</span><br><span class="line">layout: &#123;&#123; title &#125;&#125;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>./post.md</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">urlname:   # 为文章起个英文链接</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
 <h1 id="hexo-使用教程"><a href="#hexo-使用教程" class="headerlink" title="hexo 使用教程"></a>hexo 使用教程</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [模版layout] &lt;题目title&gt;</span><br></pre></td></tr></table></figure>
 
 <p>通常情况下可直接输入 </p>
@@ -1170,9 +1182,9 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>此时，输入 <code>hexo new &lt;title&gt;</code> ，会在<code>./source/_post</code> 目录下创建 <code>&lt;title&gt;.md</code> 文件和与之同名的 <code>&lt;title&gt;</code> 目录，将本地图片放入对应目录内，图片名称不做规范。最后，在想添加图片的<code>&lt;title&gt;.md</code> 文件的对应位置写入</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片描述(可不填)](图片名称&quot;鼠标悬停文字(可不填)&quot;)&#96;</span><br></pre></td></tr></table></figure>
 
-<p>如果添加网络图片，则不会占用本地资源，也不需要进行以上设置，对于网络图片可直接输入</p>
+<p><strong><em>如果添加网络图片，则不会占用本地资源，也不需要进行以上设置，对于网络图片可直接输入</em></strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片描述(可不填)](图片链接地址&quot;鼠标悬停文字(可不填)&quot;)&#96;</span><br></pre></td></tr></table></figure>
-<p>此外，还可以把图片存入 <code>markdown</code>文件</p>
+<p>此外，<strong><em>推荐把图片存入 <code>markdown</code>文件</em></strong></p>
 <p>在 <code>python</code> 中输入</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line">f=open(<span class="string">'1.png'</span>,<span class="string">'rb'</span>) </span><br><span class="line">ls_f=base64.b64encode(f.read()) </span><br><span class="line">f.close()</span><br><span class="line">print(ls_f)</span><br></pre></td></tr></table></figure>
 
@@ -1195,7 +1207,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <h2 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
 <p>随后会在目录下的 <code>./source/tags</code> 创建名为 <code>index.md</code> 的文件，可采用 <code>vi</code> 命令进入文件对其编写，完成后输入 <code>:wq</code> 保存并退出，格式可参考</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h2 id="修改模版"><a href="#修改模版" class="headerlink" title="修改模版"></a>修改模版</h2><p>在目录 <code>./blog/scaffolds/</code> 下可以修改<code>draft.md</code>，<code>page.md</code>，<code>post.md</code> 三种默认布局</p>
+
 <h2 id="引用站内其他文章"><a href="#引用站内其他文章" class="headerlink" title="引用站内其他文章"></a>引用站内其他文章</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% post_link 文章文件名（不要后缀） 描述文字（可选） %&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -1204,7 +1216,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <blockquote>
 <p>HTML（HyperText Mark-up Language）是一种制作万维网页面的标准语言，它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。</p>
 </blockquote>
-<p>有关 HTML 的常用语法，参考本站 : <a href="/HTML%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="HTML常用语法">HTML常用语法</a></p>
+<p>有关 HTML 的常用语法，参考本站 : <a href="/html_syntax/" title="HTML常用语法">HTML常用语法</a></p>
 <h1 id="更改-hexo-主题"><a href="#更改-hexo-主题" class="headerlink" title="更改 hexo 主题"></a>更改 hexo 主题</h1><p>进入 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo 主题官网</a> 挑选合适的主题，这里以主题 <code>A-Ayer</code> 为例</p>
 <p>点击主题下方链接进入下载页面</p>
 <ul>
@@ -1272,10 +1284,10 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
   </entry>
   <entry>
     <title>利用termux搭建手机私有云</title>
-    <url>/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/</url>
+    <url>/build_netdisk/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><code>filebrowser</code> 是一款远端文件浏览器，把服务部署在服务器上，只要保持连接设备与服务器间网络链接通畅，可以随时随地完成对文件和目录的管理操作，同时拥有上传和下载功能</p>
 <ul>
-<li>如果还想实现对文件的在线编辑，请参见 <a href="/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/" title="在termux上安装python">在termux上安装python</a> 的 <code>jupyter</code> 部分</li>
+<li>如果还想实现对文件的在线编辑，请参见 <a href="/install_python/" title="在termux上安装python">在termux上安装python</a> 的 <code>jupyter</code> 部分</li>
 </ul>
 <blockquote>
 <p><code>Jupyter Notebook</code> 是一个交互式笔记本，便于创建和共享文学化程序文档。除此之外，还支持视频、图片、PPT的在线观看</p>
@@ -1317,7 +1329,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
   </entry>
   <entry>
     <title>在termux上安装octave</title>
-    <url>/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/</url>
+    <url>/install_octave/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>手机借助 <code>termux</code> 安装 <code>octave</code> ，可在手机实现科学计算</p>
 <h1 id="添加-GNU-软件源"><a href="#添加-GNU-软件源" class="headerlink" title="添加 GNU 软件源"></a>添加 GNU 软件源</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg install curl gnupg</span><br><span class="line">curl -LO https://its-pointless.github.io/setup-pointless-repo.sh </span><br><span class="line">bash setup-pointless-repo.sh</span><br></pre></td></tr></table></figure>
 
@@ -1341,7 +1353,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
   </entry>
   <entry>
     <title>在termux上安装python</title>
-    <url>/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/</url>
+    <url>/install_python/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>通过termux可以将python 安装到手机上，随身查看并编写脚本</p>
 <h1 id="安装-python"><a href="#安装-python" class="headerlink" title="安装 python"></a>安装 python</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg instll python</span><br></pre></td></tr></table></figure>
 
@@ -1395,7 +1407,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
   </entry>
   <entry>
     <title>termux的安装及配置</title>
-    <url>/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</url>
+    <url>/install_termux/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="termux-的安装"><a href="#termux-的安装" class="headerlink" title="termux 的安装"></a>termux 的安装</h1><p>下载地址</p>
 <ul>
 <li><a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener">https://f-droid.org/packages/com.termux/</a></li>
