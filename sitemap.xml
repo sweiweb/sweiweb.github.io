@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sweiweb.github.io/music/index.html</loc>
+    
+    <lastmod>2020-03-26T12:13:59.390Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.github.io/music/1%E9%9D%99%E6%80%81.html</loc>
+    
+    <lastmod>2020-03-26T12:12:21.410Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.github.io/music/2%E5%8A%A8%E6%80%81.html</loc>
+    
+    <lastmod>2020-03-26T12:12:20.630Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sweiweb.github.io/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2020-03-26T09:12:33.690Z</lastmod>
@@ -33,13 +54,6 @@
     <loc>https://sweiweb.github.io/%E5%AE%9E%E7%94%A8%E7%BD%91%E5%9D%80%E6%94%B6%E5%BD%95/</loc>
     
     <lastmod>2020-03-25T16:58:10.510Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.github.io/music/index.html</loc>
-    
-    <lastmod>2020-03-25T09:03:12.330Z</lastmod>
     
   </url>
   
