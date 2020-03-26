@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://sweiweb.gitee.io/"/>
   <updated>2020-03-26T02:56:54.910Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://sweiweb.gitee.io/</id>
   
   <author>
     <name>孙 伟</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>HTML常用语法</title>
-    <link href="http://yoursite.com/2020/03/25/HTML%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2020/03/25/HTML%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</id>
+    <link href="https://sweiweb.gitee.io/HTML%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
+    <id>https://sweiweb.gitee.io/HTML%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</id>
     <published>2020-03-25T13:41:51.000Z</published>
     <updated>2020-03-26T02:56:54.910Z</updated>
     
@@ -35,21 +35,21 @@
     </summary>
     
     
-      <category term="termux教程" scheme="http://yoursite.com/categories/termux%E6%95%99%E7%A8%8B/"/>
+      <category term="termux教程" scheme="https://sweiweb.gitee.io/categories/termux%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+      <category term="HTML" scheme="https://sweiweb.gitee.io/tags/HTML/"/>
     
-      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://sweiweb.gitee.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://sweiweb.gitee.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>诗词之美</title>
-    <link href="http://yoursite.com/2020/03/25/%E8%AF%97%E8%AF%8D%E4%B9%8B%E7%BE%8E/"/>
-    <id>http://yoursite.com/2020/03/25/%E8%AF%97%E8%AF%8D%E4%B9%8B%E7%BE%8E/</id>
+    <link href="https://sweiweb.gitee.io/%E8%AF%97%E8%AF%8D%E4%B9%8B%E7%BE%8E/"/>
+    <id>https://sweiweb.gitee.io/%E8%AF%97%E8%AF%8D%E4%B9%8B%E7%BE%8E/</id>
     <published>2020-03-25T12:33:25.000Z</published>
     <updated>2020-03-26T03:03:46.370Z</updated>
     
@@ -65,17 +65,17 @@
     </summary>
     
     
-      <category term="收录" scheme="http://yoursite.com/categories/%E6%94%B6%E5%BD%95/"/>
+      <category term="收录" scheme="https://sweiweb.gitee.io/categories/%E6%94%B6%E5%BD%95/"/>
     
     
-      <category term="诗词" scheme="http://yoursite.com/tags/%E8%AF%97%E8%AF%8D/"/>
+      <category term="诗词" scheme="https://sweiweb.gitee.io/tags/%E8%AF%97%E8%AF%8D/"/>
     
   </entry>
   
   <entry>
     <title>实用网址收录</title>
-    <link href="http://yoursite.com/2020/03/24/%E5%AE%9E%E7%94%A8%E7%BD%91%E5%9D%80%E6%94%B6%E5%BD%95/"/>
-    <id>http://yoursite.com/2020/03/24/%E5%AE%9E%E7%94%A8%E7%BD%91%E5%9D%80%E6%94%B6%E5%BD%95/</id>
+    <link href="https://sweiweb.gitee.io/%E5%AE%9E%E7%94%A8%E7%BD%91%E5%9D%80%E6%94%B6%E5%BD%95/"/>
+    <id>https://sweiweb.gitee.io/%E5%AE%9E%E7%94%A8%E7%BD%91%E5%9D%80%E6%94%B6%E5%BD%95/</id>
     <published>2020-03-24T15:22:40.000Z</published>
     <updated>2020-03-25T16:58:10.510Z</updated>
     
@@ -91,21 +91,21 @@
     </summary>
     
     
-      <category term="收录" scheme="http://yoursite.com/categories/%E6%94%B6%E5%BD%95/"/>
+      <category term="收录" scheme="https://sweiweb.gitee.io/categories/%E6%94%B6%E5%BD%95/"/>
     
     
-      <category term="网址" scheme="http://yoursite.com/tags/%E7%BD%91%E5%9D%80/"/>
+      <category term="网址" scheme="https://sweiweb.gitee.io/tags/%E7%BD%91%E5%9D%80/"/>
     
-      <category term="图片" scheme="http://yoursite.com/tags/%E5%9B%BE%E7%89%87/"/>
+      <category term="图片" scheme="https://sweiweb.gitee.io/tags/%E5%9B%BE%E7%89%87/"/>
     
-      <category term="PPT" scheme="http://yoursite.com/tags/PPT/"/>
+      <category term="PPT" scheme="https://sweiweb.gitee.io/tags/PPT/"/>
     
   </entry>
   
   <entry>
     <title>利用termux在手机搭建博客</title>
-    <link href="http://yoursite.com/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2020/03/23/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</id>
+    <link href="https://sweiweb.gitee.io/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://sweiweb.gitee.io/%E5%88%A9%E7%94%A8termux%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2020-03-23T00:44:34.000Z</published>
     <updated>2020-03-25T13:47:19.400Z</updated>
     
@@ -121,21 +121,21 @@
     </summary>
     
     
-      <category term="termux教程" scheme="http://yoursite.com/categories/termux%E6%95%99%E7%A8%8B/"/>
+      <category term="termux教程" scheme="https://sweiweb.gitee.io/categories/termux%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://sweiweb.gitee.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://sweiweb.gitee.io/tags/hexo/"/>
     
-      <category term="termux" scheme="http://yoursite.com/tags/termux/"/>
+      <category term="termux" scheme="https://sweiweb.gitee.io/tags/termux/"/>
     
   </entry>
   
   <entry>
     <title>利用termux搭建手机私有云</title>
-    <link href="http://yoursite.com/2020/03/23/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/"/>
-    <id>http://yoursite.com/2020/03/23/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/</id>
+    <link href="https://sweiweb.gitee.io/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/"/>
+    <id>https://sweiweb.gitee.io/%E5%88%A9%E7%94%A8termux%E6%90%AD%E5%BB%BA%E6%89%8B%E6%9C%BA%E7%A7%81%E6%9C%89%E4%BA%91/</id>
     <published>2020-03-22T17:36:22.000Z</published>
     <updated>2020-03-25T08:07:32.410Z</updated>
     
@@ -151,23 +151,23 @@
     </summary>
     
     
-      <category term="termux教程" scheme="http://yoursite.com/categories/termux%E6%95%99%E7%A8%8B/"/>
+      <category term="termux教程" scheme="https://sweiweb.gitee.io/categories/termux%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="termux" scheme="http://yoursite.com/tags/termux/"/>
+      <category term="termux" scheme="https://sweiweb.gitee.io/tags/termux/"/>
     
-      <category term="私有云" scheme="http://yoursite.com/tags/%E7%A7%81%E6%9C%89%E4%BA%91/"/>
+      <category term="私有云" scheme="https://sweiweb.gitee.io/tags/%E7%A7%81%E6%9C%89%E4%BA%91/"/>
     
-      <category term="filebrowser" scheme="http://yoursite.com/tags/filebrowser/"/>
+      <category term="filebrowser" scheme="https://sweiweb.gitee.io/tags/filebrowser/"/>
     
-      <category term="内网穿透" scheme="http://yoursite.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+      <category term="内网穿透" scheme="https://sweiweb.gitee.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
   </entry>
   
   <entry>
     <title>在termux上安装octave</title>
-    <link href="http://yoursite.com/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/"/>
-    <id>http://yoursite.com/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/</id>
+    <link href="https://sweiweb.gitee.io/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/"/>
+    <id>https://sweiweb.gitee.io/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85octave/</id>
     <published>2020-03-22T12:35:12.000Z</published>
     <updated>2020-03-25T08:07:14.330Z</updated>
     
@@ -183,19 +183,19 @@
     </summary>
     
     
-      <category term="termux教程" scheme="http://yoursite.com/categories/termux%E6%95%99%E7%A8%8B/"/>
+      <category term="termux教程" scheme="https://sweiweb.gitee.io/categories/termux%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="termux" scheme="http://yoursite.com/tags/termux/"/>
+      <category term="termux" scheme="https://sweiweb.gitee.io/tags/termux/"/>
     
-      <category term="octave" scheme="http://yoursite.com/tags/octave/"/>
+      <category term="octave" scheme="https://sweiweb.gitee.io/tags/octave/"/>
     
   </entry>
   
   <entry>
     <title>在termux上安装python</title>
-    <link href="http://yoursite.com/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/"/>
-    <id>http://yoursite.com/2020/03/22/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/</id>
+    <link href="https://sweiweb.gitee.io/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/"/>
+    <id>https://sweiweb.gitee.io/%E5%9C%A8termux%E4%B8%8A%E5%AE%89%E8%A3%85python/</id>
     <published>2020-03-22T12:20:41.000Z</published>
     <updated>2020-03-25T08:08:02.320Z</updated>
     
@@ -211,19 +211,19 @@
     </summary>
     
     
-      <category term="termux教程" scheme="http://yoursite.com/categories/termux%E6%95%99%E7%A8%8B/"/>
+      <category term="termux教程" scheme="https://sweiweb.gitee.io/categories/termux%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="termux" scheme="http://yoursite.com/tags/termux/"/>
+      <category term="termux" scheme="https://sweiweb.gitee.io/tags/termux/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+      <category term="python" scheme="https://sweiweb.gitee.io/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>termux的安装及配置</title>
-    <link href="http://yoursite.com/2020/03/22/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2020/03/22/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://sweiweb.gitee.io/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/"/>
+    <id>https://sweiweb.gitee.io/termux%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</id>
     <published>2020-03-22T10:44:05.000Z</published>
     <updated>2020-03-25T08:06:28.370Z</updated>
     
@@ -239,10 +239,10 @@
     </summary>
     
     
-      <category term="termux教程" scheme="http://yoursite.com/categories/termux%E6%95%99%E7%A8%8B/"/>
+      <category term="termux教程" scheme="https://sweiweb.gitee.io/categories/termux%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="termux" scheme="http://yoursite.com/tags/termux/"/>
+      <category term="termux" scheme="https://sweiweb.gitee.io/tags/termux/"/>
     
   </entry>
   
