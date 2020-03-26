@@ -137,9 +137,9 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
         <category>termux教程</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>博客</tag>
         <tag>HTML</tag>
+        <tag>博客</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1278,8 +1278,8 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
       </categories>
       <tags>
         <tag>termux</tag>
-        <tag>hexo</tag>
         <tag>博客</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1321,10 +1321,10 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
         <category>termux教程</category>
       </categories>
       <tags>
+        <tag>termux</tag>
         <tag>私有云</tag>
         <tag>filebrowser</tag>
         <tag>内网穿透</tag>
-        <tag>termux</tag>
       </tags>
   </entry>
   <entry>
