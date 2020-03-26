@@ -102,7 +102,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <td>垂直居中对其 / 顶对齐 / 底对齐(一般设置行高后使用)</td>
 </tr>
 </tbody></table>
-<h1 id="div-标签"><a href="#div-标签" class="headerlink" title="div 标签"></a><code>div</code> 标签</h1><p><code>div</code> 标签用于定义文档中的分区或节，把文档分割为独立的、不同的部分。有一下两个常用案例:</p>
+<h1 id="div-标签"><a href="#div-标签" class="headerlink" title="div 标签"></a><code>div</code> 标签</h1><p><code>div</code> 标签用于定义文档中的分区或节，把文档分割为独立的、不同的部分。有以下两个常用案例:</p>
 <h2 id="写一篇古诗"><a href="#写一篇古诗" class="headerlink" title="写一篇古诗"></a>写一篇古诗</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;margin-top:18px"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"font-size:22px;font-weight:bold;font-family:黑体"</span>&gt;</span>题龙阳县青草湖<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"font-size:12px;"</span>&gt;</span>作者：唐珙<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>西风吹老洞庭波，一夜湘君白发多。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>醉后不知天在水，满船清梦压星河。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <div style="text-align:center;margin-top:18px">
@@ -810,7 +810,14 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>窗含西岭千秋雪，门泊东吴万里船。</p>
 </div>
 <br>
-]]></content>
+
+<div style="text-align:center;margin-top:20px">
+<p style="font-size:25px;font-weight:bold;font-family:黑体">题临安邸</p>
+<p style="font-size:15px;">作者：林升</p>
+<p>山外青山楼外楼，西湖歌舞几时休？</p>
+<p>暖风熏得游人醉，直把杭州作汴州。</p>
+</div>
+<br>]]></content>
       <categories>
         <category>收录</category>
       </categories>
