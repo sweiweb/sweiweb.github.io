@@ -137,9 +137,9 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
         <category>termux教程</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
-        <tag>博客</tag>
         <tag>hexo</tag>
+        <tag>博客</tag>
+        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
@@ -1163,7 +1163,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> ---</span><br><span class="line">title: &lt;title&gt;</span><br><span class="line">date: 2020-03-23 08:44:34</span><br><span class="line">tags:</span><br><span class="line">- tag1</span><br><span class="line">categories: </span><br><span class="line">- category1</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 <h3 id="首次在文章中插入本地图片需要进行以下操作"><a href="#首次在文章中插入本地图片需要进行以下操作" class="headerlink" title="首次在文章中插入本地图片需要进行以下操作"></a>首次在文章中插入<strong>本地</strong>图片需要进行以下操作</h3><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code>，输入<code>i</code>进入编写状态，修改</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">post<span class="emphasis">_asset_</span>folder: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
 <p>安装插件</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
 
@@ -1265,9 +1265,9 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
         <category>termux教程</category>
       </categories>
       <tags>
-        <tag>博客</tag>
-        <tag>hexo</tag>
         <tag>termux</tag>
+        <tag>hexo</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1309,10 +1309,10 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
         <category>termux教程</category>
       </categories>
       <tags>
-        <tag>termux</tag>
         <tag>私有云</tag>
         <tag>filebrowser</tag>
         <tag>内网穿透</tag>
+        <tag>termux</tag>
       </tags>
   </entry>
   <entry>
