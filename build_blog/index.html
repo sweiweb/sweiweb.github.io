@@ -149,10 +149,10 @@ function activateLightMode(){
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
 
 <p>此时，输入 <code>hexo new &lt;title&gt;</code> ，会在<code>./source/_post</code> 目录下创建 <code>&lt;title&gt;.md</code> 文件和与之同名的 <code>&lt;title&gt;</code> 目录，将本地图片放入对应目录内，图片名称不做规范。最后，在想添加图片的<code>&lt;title&gt;.md</code> 文件的对应位置写入</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述(可不填)</span>](<span class="link">图片名称"鼠标悬停文字(可不填</span>)")`</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述(可不填)</span>](<span class="link">图片名称"鼠标悬停文字(可不填</span>)")</span><br></pre></td></tr></table></figure>
 
 <p><strong><em>如果添加网络图片，则不会占用本地资源，也不需要进行以上设置，对于网络图片可直接输入</em></strong></p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述(可不填)</span>](<span class="link">图片链接地址"鼠标悬停文字(可不填</span>)")`</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述(可不填)</span>](<span class="link">图片链接地址"鼠标悬停文字(可不填</span>)")</span><br></pre></td></tr></table></figure>
 <p>此外，<strong><em>推荐把图片存入 <code>markdown</code>文件</em></strong></p>
 <p>在 <code>python</code> 中输入</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line">f=open(<span class="string">'1.png'</span>,<span class="string">'rb'</span>) </span><br><span class="line">ls_f=base64.b64encode(f.read()) </span><br><span class="line">f.close()</span><br><span class="line">print(ls_f)</span><br></pre></td></tr></table></figure>
