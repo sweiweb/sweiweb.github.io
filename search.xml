@@ -1102,14 +1102,14 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><ul>
 <li><p><a href="https://potplayer.org/" target="_blank" rel="noopener">PotPlayer : https://potplayer.org/</a></p>
 </li>
-<li><p><a href="https://www.bandicam.cn/" target="_blank" rel="noopener">Bandicam (付费): https://www.bandicam.cn/</a></p>
+<li><p><a href="http://www.kmplayer.cn/" target="_blank" rel="noopener">kmplayer : http://www.kmplayer.cn/</a></p>
 </li>
 </ul>
 <hr>
 <h1 id="视频录制"><a href="#视频录制" class="headerlink" title="视频录制"></a>视频录制</h1><ul>
 <li><p><a href="https://obsproject.com/zh-cn" target="_blank" rel="noopener">OBS Studio : https://obsproject.com/</a> </p>
 </li>
-<li><p><a href="http://www.kmplayer.cn/" target="_blank" rel="noopener">KMPlayer : http://www.kmplayer.cn/</a></p>
+<li><p><a href="https://www.bandicam.cn/" target="_blank" rel="noopener">Bandicam (付费): https://www.bandicam.cn/</a></p>
 </li>
 </ul>
 <hr>
@@ -1126,7 +1126,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 </li>
 </ul>
 <h2 id="屏幕录制（win）"><a href="#屏幕录制（win）" class="headerlink" title="屏幕录制（win）"></a>屏幕录制（win）</h2><ul>
-<li><a href="https://gitee.com/sweiweb/code/raw/master/Bandicam.zip" target="_blank" rel="noopener">Bandicam 1.9.5(旧版)</a><br><a href="https://github.com/sweiweb/code/raw/master/Bandicam.zip" target="_blank" rel="noopener">[备用地址]</a></li>
+<li><a href="https://gitee.com/sweiweb/code/raw/master/Bandicam.zip" target="_blank" rel="noopener">Bandicam 1.9.5</a><br><a href="https://github.com/sweiweb/code/raw/master/Bandicam.zip" target="_blank" rel="noopener">[备用地址]</a></li>
 </ul>
 <hr>
 ]]></content>
