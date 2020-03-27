@@ -1270,7 +1270,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <hr>
 <h1 id="hexo-插件"><a href="#hexo-插件" class="headerlink" title="hexo 插件"></a>hexo 插件</h1><ul>
 <li>音乐插件: <a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a></li>
-<li>电影插件: <a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">hexo-douban</a></li>
+<li>豆瓣插件: <a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">hexo-douban</a></li>
 <li>搜索插件: <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></li>
 </ul>
 <hr>
