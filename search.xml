@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>必备软件收录</title>
+    <url>/basic_software/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h1><p>上网必备，还有很多使用实用插件，下载一定要在<a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank" rel="noopener">官网下载</a>。</p>
+<h1 id="Bandizip"><a href="#Bandizip" class="headerlink" title="Bandizip"></a>Bandizip</h1><p>压缩软件，界面友好，最突出的功能为 <code>自动解压</code>，如果压缩包内有若干个文件时自动创建文件夹。此外，还会在右键菜单顶部加一个新建文件夹功能，更方便的新建文件夹。</p>
+<h1 id="Notepad"><a href="#Notepad" class="headerlink" title="Notepad++"></a>Notepad++</h1><p><a href="http://www.notepad-plus-plus.org/" target="_blank" rel="noopener">下载地址：http://www.notepad-plus-plus.org/</a></p>
+<p>自由，开源的文本编辑器，打开速度快，支持按 <code>Alt</code> 对列操作，支持多达 27 种语法高亮度显示，配合设置无扩展名文件自动以 <code>txt</code> 方式打开，对于经常编辑无扩展名的文件非常友好。设置方法：</p>
+<ul>
+<li>新建一个文件，更改扩展名为 <code>.reg</code>，写入一下内容</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.]</span><br><span class="line">&quot;DefaultIcon&quot;&#x3D;hex(2):00,00</span><br><span class="line">&quot;EditFlags&quot;&#x3D;dword:00010000</span><br><span class="line">@&#x3D;&quot;Text Document&quot;</span><br><span class="line">&quot;FriendlyTypeName&quot;&#x3D;hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,\</span><br><span class="line">  00,6f,00,6f,00,74,00,25,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,\</span><br><span class="line">  32,00,5c,00,6e,00,6f,00,74,00,65,00,70,00,61,00,64,00,2e,00,65,00,78,00,65,\</span><br><span class="line">  00,2c,00,2d,00,34,00,36,00,39,00,00,00</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.\DefaultIcon]</span><br><span class="line">@&#x3D;hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\</span><br><span class="line">  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,69,00,6d,00,\</span><br><span class="line">  61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,00,2c,00,2d,00,31,\</span><br><span class="line">  00,30,00,32,00,00,00</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.\shell]</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.\shell\open]</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.\shell\open\command]</span><br><span class="line">@&#x3D;hex(2):44,00,3a,00,5c,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,20,00,46,\</span><br><span class="line">  00,69,00,6c,00,65,00,73,00,20,00,28,00,78,00,38,00,36,00,29,00,5c,00,4e,00,\</span><br><span class="line">  6f,00,74,00,65,00,70,00,61,00,64,00,2b,00,2b,00,5c,00,6e,00,6f,00,74,00,65,\</span><br><span class="line">  00,70,00,61,00,64,00,2b,00,2b,00,2e,00,65,00,78,00,65,00,20,00,25,00,31,00,\</span><br><span class="line">  00,00</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.\shell\print]</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.\shell\print\command]</span><br><span class="line">@&#x3D;hex(2):44,00,3a,00,5c,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,20,00,46,\</span><br><span class="line">  00,69,00,6c,00,65,00,73,00,20,00,28,00,78,00,38,00,36,00,29,00,5c,00,4e,00,\</span><br><span class="line">  6f,00,74,00,65,00,70,00,61,00,64,00,2b,00,2b,00,5c,00,6e,00,6f,00,74,00,65,\</span><br><span class="line">  00,70,00,61,00,64,00,2b,00,2b,00,2e,00,65,00,78,00,65,00,20,00,2f,00,70,00,\</span><br><span class="line">  20,00,25,00,31,00,00,00</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.\shell\printto]</span><br><span class="line"> </span><br><span class="line">[HKEY_CLASSES_ROOT\.\shell\printto\command]</span><br><span class="line">@&#x3D;hex(2):44,00,3a,00,5c,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,20,00,46,\</span><br><span class="line">  00,69,00,6c,00,65,00,73,00,20,00,28,00,78,00,38,00,36,00,29,00,5c,00,4e,00,\</span><br><span class="line">  6f,00,74,00,65,00,70,00,61,00,64,00,2b,00,2b,00,5c,00,6e,00,6f,00,74,00,65,\</span><br><span class="line">  00,70,00,61,00,64,00,2b,00,2b,00,2e,00,65,00,78,00,65,00,20,00,2f,00,70,00,\</span><br><span class="line">  74,00,20,00,22,00,25,00,31,00,22,00,20,00,22,00,25,00,32,00,22,00,20,00,22,\</span><br><span class="line">  00,25,00,33,00,22,00,20,00,22,00,25,00,34,00,22,00,00,00</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>双击运行</p>
+</li>
+<li><p>打开注册表编辑器：<code>开始</code> -&gt; <code>运行</code> -&gt; <code>regedit</code> -&gt; <code>确定</code></p>
+</li>
+<li><p>进入 <code>HKEY_CLASSES_ROOT/./shell/open（print, printto可选)/command/</code>下</p>
+</li>
+<li><p>改路径为 <code>F:\Notepad++\notepad++.exe %1</code>，其中<code>&quot;F:\Notepad++\notepad++.exe&quot;</code>为自己的 <code>notepad++</code> 编辑器路径</p>
+</li>
+</ul>
+<h1 id="MPV-player"><a href="#MPV-player" class="headerlink" title="MPV player"></a>MPV player</h1><p><a href="https://mpv.io/" target="_blank" rel="noopener">下载地址：https://mpv.io/</a></p>
+<p>跨平台播放器， 特点：<strong><code>开源</code> <code>全能</code> <code>极简</code></strong></p>
+<h1 id="FormatFactory"><a href="#FormatFactory" class="headerlink" title="FormatFactory"></a>FormatFactory</h1><p><a href="http://www.pcgeshi.com/" target="_blank" rel="noopener">下载地址：http://www.pcgeshi.com/</a></p>
+<p>格式工厂，支持多种格式转换</p>
+<h1 id="Bandicam"><a href="#Bandicam" class="headerlink" title="Bandicam"></a>Bandicam</h1><p>屏幕录制工具，窗口，游戏都可以录制，生成的视频清晰，且体积小。</p>
+<h1 id="Adobe-Acrobat-XI-DC"><a href="#Adobe-Acrobat-XI-DC" class="headerlink" title="Adobe Acrobat XI / DC"></a>Adobe Acrobat XI / DC</h1><p>PDF阅读器，XI 和 DC 这两个版本界面风格迥异，根据个人喜好下载。</p>
+<h1 id="Adobe-Premiere"><a href="#Adobe-Premiere" class="headerlink" title="Adobe Premiere"></a>Adobe Premiere</h1><p>视频剪辑工具</p>
+<h1 id="Adobe-Photoshop"><a href="#Adobe-Photoshop" class="headerlink" title="Adobe Photoshop"></a>Adobe Photoshop</h1><p>图片编辑软件</p>
+<h1 id="Adobe-Audition"><a href="#Adobe-Audition" class="headerlink" title="Adobe Audition"></a>Adobe Audition</h1><p>音频编辑软件</p>
+<h1 id="CCleaner"><a href="#CCleaner" class="headerlink" title="CCleaner"></a>CCleaner</h1><p>计算机文件清理工具，清除电脑里不需要的垃圾文件</p>
+<h1 id="Total-Uninstall"><a href="#Total-Uninstall" class="headerlink" title="Total Uninstall"></a>Total Uninstall</h1><p>卸载软件总卸载不干净？ <code>Total Uninstall</code> 软件安装卸载监视，能帮你监视软件安装的所有过程，并记录下它对系统所做的<strong>任何改变</strong>的软件，比如：添加的文件、对注册表和系统文件的修改，并制作成安装前和安装后的快照。卸载软件时不需要使用卸载程序，直接通过 <code>Total Uninstall</code> 便可将其完全地清除出系统，不留下任何痕迹。总的来说，使用它，可以实现对软件的完美卸载。</p>
+<h1 id="Sandboxie"><a href="#Sandboxie" class="headerlink" title="Sandboxie"></a>Sandboxie</h1><p>基于主机入侵防御系统的沙盘工具。允许你在沙盘环境中运行浏览器或其他程序，因此运行所产生的变化可以随后删除。有以下好处：</p>
+<ul>
+<li><p>在沙盘中运行浏览器，可以防止莫名下载软件，保护系统，非常方便的清除上网缓存和历史记录</p>
+</li>
+<li><p>可以安装并不确定安全性的软件，与系统隔离运行，保护系统安全</p>
+</li>
+<li><p>在沙盘<strong>安装</strong>软件，可以很轻松的查看安装的所有文件的地址。并且可以进行软件绿化</p>
+</li>
+<li><p>在沙盘<strong>运行</strong>软件，可以方便以后清除运行时产生的垃圾文件。</p>
+</li>
+</ul>
+<h1 id="Shadow-Defender"><a href="#Shadow-Defender" class="headerlink" title="Shadow Defender"></a>Shadow Defender</h1><p>一款类似于沙盘软件的系统保护工具，可用于系统还原、文件保护等，使用 <code>Shadow Defender</code> 可以让系统进入影子模式，所有一切对电脑系统、文件、程序的更改将都不会进行保存，充分保护用户电脑的真实环境，如果系统遇到麻烦或进行了不必要的更改，经重新引导后，系统即可恢复至初始状态，当然了，借助Shadow Defender，你既可以指定需要进入影子模式的磁盘分区，也可以灵活地指定文件或文件夹永久保存到真实环境中，确保系统重新启动后保留重要的文件资料。</p>
+<p>可以与 <code>Sandboxie</code> 结合使用，安装软件时在 <code>Sandboxie</code> 安装，将软件注册表映射到 <code>Sandboxie</code> 指定的其他位置。设置 <code>Shadow Defender</code> C 盘影子模式。每次重启都不会改变 C 盘数据，保证系统安全，又可以保证系统缓存垃圾在每次关机时被清理。</p>
+<h1 id="Dism"><a href="#Dism" class="headerlink" title="Dism++"></a>Dism++</h1><p><a href="http://www.chuyu.me/zh-Hans/index.html" target="_blank" rel="noopener">下载地址：http://www.chuyu.me/zh-Hans/index.html</a></p>
+<p>强大的系统优化工具，内置多种实用工具</p>
+<h1 id="DiskGenius"><a href="#DiskGenius" class="headerlink" title="DiskGenius"></a>DiskGenius</h1><p>集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件，有时候需要用该软件对U盘进行操作。</p>
+<h1 id="MenuMgr"><a href="#MenuMgr" class="headerlink" title="MenuMgr"></a>MenuMgr</h1><p>右键管理工具，可以隐藏一些不用的右键功能，简化右键列表</p>
+<h1 id="Unlocker"><a href="#Unlocker" class="headerlink" title="Unlocker"></a>Unlocker</h1><p>强力结束文件进程，在普通删除时提示文件被占用无法结束进程时使用。</p>
+<h1 id="CopyTranslator"><a href="#CopyTranslator" class="headerlink" title="CopyTranslator"></a>CopyTranslator</h1><p><a href="https://copytranslator.github.io/" target="_blank" rel="noopener">下载地址：https://copytranslator.github.io/</a></p>
+<p>复制翻译软件，可以自动去除复制文本中的换行符，翻译出来的语句更连贯。</p>
+<h1 id="DBAdmin"><a href="#DBAdmin" class="headerlink" title="DBAdmin"></a>DBAdmin</h1><p><a href="https://slser.com/" target="_blank" rel="noopener">下载地址：https://slser.com/</a></p>
+<p>一款简单好用的远程控制软件，体积小，无需安装。</p>
+<h1 id="GetData"><a href="#GetData" class="headerlink" title="GetData"></a>GetData</h1><p>方便的获取图片内的数据，如长度，比例等等信息。</p>
+<h1 id="Aero-Timer-Plus"><a href="#Aero-Timer-Plus" class="headerlink" title="Aero Timer Plus"></a>Aero Timer Plus</h1><p>桌面时钟，包含定时关机，定时提醒等实用功能。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>收录</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML常用语法</title>
     <url>/html_syntax/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
@@ -1102,15 +1168,12 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><ul>
 <li><p><a href="https://potplayer.org/" target="_blank" rel="noopener">PotPlayer : https://potplayer.org/</a></p>
 </li>
-<li><p><a href="http://www.kmplayer.cn/" target="_blank" rel="noopener">kmplayer : http://www.kmplayer.cn/</a></p>
+<li><p><a href="https://mpv.io/" target="_blank" rel="noopener">MPV Player : https://mpv.io/</a></p>
 </li>
 </ul>
 <hr>
 <h1 id="视频录制"><a href="#视频录制" class="headerlink" title="视频录制"></a>视频录制</h1><ul>
-<li><p><a href="https://obsproject.com/zh-cn" target="_blank" rel="noopener">OBS Studio : https://obsproject.com/</a> </p>
-</li>
-<li><p><a href="https://www.bandicam.cn/" target="_blank" rel="noopener">Bandicam (付费): https://www.bandicam.cn/</a></p>
-</li>
+<li><a href="https://obsproject.com/zh-cn" target="_blank" rel="noopener">OBS Studio : https://obsproject.com/</a> </li>
 </ul>
 <hr>
 <h1 id="经典版本收藏"><a href="#经典版本收藏" class="headerlink" title="经典版本收藏"></a>经典版本收藏</h1><h2 id="解压软件（win）"><a href="#解压软件（win）" class="headerlink" title="解压软件（win）"></a>解压软件（win）</h2><ul>
