@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sweiweb.gitee.io/basic_software/</loc>
+    
+    <lastmod>2020-03-28T17:30:08.770Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/build_blog/</loc>
+    
+    <lastmod>2020-03-28T13:35:59.370Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/url_address/</loc>
+    
+    <lastmod>2020-03-28T13:32:06.350Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sweiweb.gitee.io/html_syntax/</loc>
     
     <lastmod>2020-03-28T08:29:10.270Z</lastmod>
@@ -12,27 +33,6 @@
     <loc>https://sweiweb.gitee.io/movies/index.html</loc>
     
     <lastmod>2020-03-28T08:18:17.750Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/url_address/</loc>
-    
-    <lastmod>2020-03-28T06:09:37.030Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/basic_software/</loc>
-    
-    <lastmod>2020-03-28T05:53:39.590Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/build_blog/</loc>
-    
-    <lastmod>2020-03-27T12:08:39.440Z</lastmod>
     
   </url>
   
