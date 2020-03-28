@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sweiweb.gitee.io/html_syntax/</loc>
+    
+    <lastmod>2020-03-28T08:29:10.270Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sweiweb.gitee.io/movies/index.html</loc>
     
-    <lastmod>2020-03-28T08:15:41.000Z</lastmod>
+    <lastmod>2020-03-28T08:18:17.750Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>https://sweiweb.gitee.io/build_netdisk/</loc>
     
     <lastmod>2020-03-26T12:46:33.380Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/html_syntax/</loc>
-    
-    <lastmod>2020-03-26T12:43:20.400Z</lastmod>
     
   </url>
   
