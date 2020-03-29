@@ -1300,7 +1300,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <li>开启gitee pages</li>
 </ul>
 <p>进入仓库，在仓库的<code>服务</code> -&gt; <code>gitee pages</code> 中点击<code>创建</code>即可</p>
-<h2 id="连接-hexo-和-git"><a href="#连接-hexo-和-git" class="headerlink" title="连接 hexo 和 git"></a>连接 hexo 和 git</h2><p>在终端输入命令设置用户名称和邮箱地址</p>
+<h2 id="连接-hexo-和-git"><a href="#连接-hexo-和-git" class="headerlink" title="连接 hexo 和 git"></a>连接 hexo 和 git</h2><p>在终端输入命令设置与 <code>github</code> 一致的用户名称和邮箱地址</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br></pre></td></tr></table></figure>
 
 <p>使用 <code>ssh-keygen</code> 生成私钥和公钥</p>
@@ -1316,7 +1316,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 </ul>
 <p>登录 <code>gitee</code>，点击右上角头像下的<code>设置</code>，点击 <code>SSH 公钥</code> 菜单， 将 <code>id_rsa.pub</code> 文件里的内容复制到 <code>公钥</code> 下方，点击<code>确定</code>。随后，可以在终端输入命令 <code>ssh -T git@gitee.com</code> 测试添加 <code>ssh</code> 是否成功。</p>
 <h2 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h2><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code>打开文件，输入<code>i</code>进入编写状态，修改文件末尾的 <code>Deployment</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> </span><br><span class="line">   <span class="attr">github:</span> <span class="string">git@github.com:your/name.github.io.git</span></span><br><span class="line">   <span class="attr">gitee:</span> <span class="string">git@gitee.com:your/name.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> </span><br><span class="line">   <span class="attr">github:</span> <span class="string">git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line">   <span class="attr">gitee:</span> <span class="string">git@gitee.com:yourname/yourname.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
 <p>其中的 <code>repository</code> 可以在 <code>github</code> (<code>gitee</code>) 账户下 <code>your repositories</code> (仓库) 的 <code>clone or downlord</code> (<code>克隆/下载</code>) 中，选择 <code>Ues SSH</code> (<code>ssh</code>) 查看。修改完成按<code>ESC</code>后输入 <code>:wq</code> 保存并退出（以下文件编辑步骤完全相同）</p>
 <h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>首先尝试创建一个新文章，输入命令</p>
@@ -1448,6 +1448,32 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 
+<hr>
+<h1 id="hexo同步源文件至github"><a href="#hexo同步源文件至github" class="headerlink" title="hexo同步源文件至github"></a>hexo同步源文件至github</h1><p>对于博客内的数据备份是非常重要的，将源文件同步至 <code>github</code>，可以有效的防止数据文件的丢失。</p>
+<h2 id="在github建立新仓库并配置"><a href="#在github建立新仓库并配置" class="headerlink" title="在github建立新仓库并配置"></a>在github建立新仓库并配置</h2><ul>
+<li><p>在 <code>github</code> 建立一个新的仓库，例如仓库名为 <code>hexo</code>，为了安全，建议将这个仓库选择为 <code>Private</code></p>
+</li>
+<li><p>进入 <code>./blog</code> 目录，输入命令 <code>git init</code></p>
+</li>
+<li><p>检查 <code>.gitignore</code> 文件内容，如果没有需要用命令 <code>vi .gitignore</code>，这里存放的是忽略同步的文件，写入：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">*.log</span><br><span class="line">node_modules&#x2F;</span><br><span class="line">public&#x2F;</span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h2><p>第一次同步时，输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"..."</span></span><br><span class="line">git remote add origin git@github.com:yourname/hexo.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>如果最后一步出错，可输入命令 <code>git push -f origin master</code> 强制推送。</p>
+<p>在以后的更新同步中，只需输入以下命令即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"..."</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>为了让同步更加方便，可以建立脚本运行，例如， 采用命令 <code>vi gitpush</code> 新建文件并编辑内容为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;...&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>为文件添加执行权限，在终端输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 700 gitpush</span><br></pre></td></tr></table></figure>
+
+<p>同步时，只需输入命令 <code>./gitpush</code> 即可</p>
 <hr>
 ]]></content>
       <categories>
