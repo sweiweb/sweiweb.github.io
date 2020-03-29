@@ -1278,7 +1278,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
   <entry>
     <title>利用termux在手机搭建博客</title>
     <url>/build_blog/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>安装 <code>termux</code> 后，可以安装 <code>hexo</code>，<strong>在手机上随时更新博客</strong>。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>安装 <code>termux</code> 后，可以安装 <code>hexo</code>，<strong>在手机上随时更新博客</strong></p>
 <ul>
 <li>对于有些文章手机不好编辑？可以在手机安装 <code>jupyter</code>，实现通过浏览器对手机文件进行在线编辑。安装方法请参见 <a href="/install_python/" title="在termux上安装python">在termux上安装python</a> 的 <code>jupyter</code> 部分。或者直接在电脑安装 <code>hexo</code></li>
 </ul>
@@ -1306,7 +1306,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>使用 <code>ssh-keygen</code> 生成私钥和公钥</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
 
-<p>注意查看输出信息的共钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat ~/生成地址/id_rsa.pub</code>查看共钥内容。</p>
+<p>注意查看输出信息的共钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat ~/生成地址/id_rsa.pub</code>查看共钥内容</p>
 <ul>
 <li>github</li>
 </ul>
@@ -1314,7 +1314,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <ul>
 <li>gitee</li>
 </ul>
-<p>登录 <code>gitee</code>，点击右上角头像下的<code>设置</code>，点击 <code>SSH 公钥</code> 菜单， 将 <code>id_rsa.pub</code> 文件里的内容复制到 <code>公钥</code> 下方，点击<code>确定</code>。随后，可以在终端输入命令 <code>ssh -T git@gitee.com</code> 测试添加 <code>ssh</code> 是否成功。</p>
+<p>登录 <code>gitee</code>，点击右上角头像下的<code>设置</code>，点击 <code>SSH 公钥</code> 菜单， 将 <code>id_rsa.pub</code> 文件里的内容复制到 <code>公钥</code> 下方，点击<code>确定</code>。随后，可以在终端输入命令 <code>ssh -T git@gitee.com</code> 测试添加 <code>ssh</code> 是否成功</p>
 <h2 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h2><p>在 <code>blog</code> 目录下对文件 <code>_config.yml</code> 进行编辑，输入 <code>vi _config.yml</code>打开文件，输入<code>i</code>进入编写状态，修改文件末尾的 <code>Deployment</code></p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> </span><br><span class="line">   <span class="attr">github:</span> <span class="string">git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line">   <span class="attr">gitee:</span> <span class="string">git@gitee.com:yourname/yourname.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
@@ -1339,7 +1339,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>./post.md</p>
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">urlname:   # 为文章起个英文链接</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<h3 id="建立-QQ-的临时会话"><a href="#建立-QQ-的临时会话" class="headerlink" title="建立 QQ 的临时会话"></a>建立 QQ 的临时会话</h3><p>进入<a href="https://shang.qq.com/" target="_blank" rel="noopener">QQ推广网址</a>，并在右上角登录 QQ，点击<code>推广工具</code><strong>开通推广</strong>，最后将链接复制到博客对应位置即可。</p>
+<h3 id="建立-QQ-的临时会话"><a href="#建立-QQ-的临时会话" class="headerlink" title="建立 QQ 的临时会话"></a>建立 QQ 的临时会话</h3><p>进入<a href="https://shang.qq.com/" target="_blank" rel="noopener">QQ推广网址</a>，并在右上角登录 QQ，点击<code>推广工具</code><strong>开通推广</strong>，最后将链接复制到博客对应位置即可</p>
 <ul>
 <li><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=你的QQ帐号&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener">http://wpa.qq.com/msgrd?v=3&amp;uin=你的QQ帐号&amp;site=qq&amp;menu=yes</a></li>
 </ul>
@@ -1391,7 +1391,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="markdown-语法"><a href="#markdown-语法" class="headerlink" title="markdown 语法"></a>markdown 语法</h2><p><code>hexo</code> 的文章内容采用 <code>markdown</code> 语法，撰写的文章内容应基于 <code>markdown</code> ，基本语法请在<strong>1分钟</strong>内学会</p>
 <h2 id="HTML-语法"><a href="#HTML-语法" class="headerlink" title="HTML 语法"></a>HTML 语法</h2><p>有时候只靠 <code>markdown</code> 写出来的风格比较单调，比如改变字体格式和布局时，这时候就要用到 <code>HTML</code> 语法</p>
 <blockquote>
-<p>HTML（HyperText Mark-up Language）是一种制作万维网页面的标准语言，它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。</p>
+<p>HTML（HyperText Mark-up Language）是一种制作万维网页面的标准语言，它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等</p>
 </blockquote>
 <p>有关 HTML 的常用语法，参考本站 : <a href="/html_syntax/" title="HTML常用语法">HTML常用语法</a></p>
 <h1 id="更改-hexo-主题"><a href="#更改-hexo-主题" class="headerlink" title="更改 hexo 主题"></a>更改 hexo 主题</h1><p>进入 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo 主题官网</a> 挑选合适的主题，这里以主题 <code>A-Ayer</code> 为例</p>
@@ -1439,7 +1439,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name yourname</span><br><span class="line">git config --global user.email youremail@example.com</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
 
-<p>注意查看输出信息的公钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容。</p>
+<p>注意查看输出信息的公钥<code>id_rsa.pub</code>所在地址,可以用命令<code>cat id_rsa.pub</code>或<code>vi id_rsa.pub</code> 查看共钥内容</p>
 <ul>
 <li><p>修改 <code>github</code> 和 <code>gitee</code> 平台的<code>ssh公钥</code></p>
 </li>
@@ -1449,7 +1449,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h1 id="hexo同步源文件至github"><a href="#hexo同步源文件至github" class="headerlink" title="hexo同步源文件至github"></a>hexo同步源文件至github</h1><p>对于博客内的数据备份是非常重要的，将源文件同步至 <code>github</code>，可以有效的防止数据文件的丢失。</p>
+<h1 id="hexo同步源文件至github"><a href="#hexo同步源文件至github" class="headerlink" title="hexo同步源文件至github"></a>hexo同步源文件至github</h1><p>对于博客内的数据备份是非常重要的，将源文件同步至 <code>github</code>，可以有效的防止数据文件的丢失</p>
 <h2 id="在github建立新仓库并配置"><a href="#在github建立新仓库并配置" class="headerlink" title="在github建立新仓库并配置"></a>在github建立新仓库并配置</h2><ul>
 <li><p>在 <code>github</code> 建立一个新的仓库，例如仓库名为 <code>hexo</code>，为了安全，建议将这个仓库选择为 <code>Private</code></p>
 </li>
@@ -1463,8 +1463,8 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <h2 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h2><p>第一次同步时，输入以下命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"..."</span></span><br><span class="line">git remote add origin git@github.com:yourname/hexo.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
-<p>如果最后一步出错，可输入命令 <code>git push -f origin master</code> 强制推送。</p>
-<p>在以后的更新同步中，只需输入以下命令即可。</p>
+<p>如果最后一步出错，可输入命令 <code>git push -f origin master</code> 强制推送</p>
+<p>在以后的更新同步中，只需输入以下命令即可</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"..."</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
 <p>为了让同步更加方便，可以建立脚本运行，例如， 采用命令 <code>vi gitpush</code> 新建文件并编辑内容为：</p>
