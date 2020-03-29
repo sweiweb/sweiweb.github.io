@@ -1417,6 +1417,14 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <li>搜索插件: <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></li>
 </ul>
 <hr>
+<h1 id="生成文件和图片链接"><a href="#生成文件和图片链接" class="headerlink" title="生成文件和图片链接"></a>生成文件和图片链接</h1><p>在一下网站注册账号，上传相应文件和图片，分享生成链接</p>
+<ul>
+<li><p><a href="https://www.lanzou.com/" target="_blank" rel="noopener">蓝奏云 : https://www.lanzou.com/</a></p>
+</li>
+<li><p><a href="https://imgchr.com/" target="_blank" rel="noopener">路过图床 : https://imgchr.com/</a></p>
+</li>
+</ul>
+<hr>
 <h1 id="hexo-数据迁移"><a href="#hexo-数据迁移" class="headerlink" title="hexo 数据迁移"></a>hexo 数据迁移</h1><p><strong>换电脑了怎么办？！</strong></p>
 <ul>
 <li><p>在新电脑安装 <code>hexo</code></p>
