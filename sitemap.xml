@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sweiweb.gitee.io/build_blog/</loc>
+    
+    <lastmod>2020-03-31T11:23:49.100Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sweiweb.gitee.io/gallery/simple/index.html</loc>
     
     <lastmod>2020-03-31T11:00:32.040Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://sweiweb.gitee.io/install_termux/</loc>
     
     <lastmod>2020-03-31T07:10:50.990Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/build_blog/</loc>
-    
-    <lastmod>2020-03-31T07:10:44.030Z</lastmod>
     
   </url>
   
