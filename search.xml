@@ -118,7 +118,6 @@
 <p>一款简单好用的远程控制软件，体积小，无需安装。</p>
 <h1 id="GetData"><a href="#GetData" class="headerlink" title="GetData"></a>GetData</h1><p>方便的获取图片内的数据，如长度，比例等等信息。</p>
 <h1 id="Aero-Timer-Plus"><a href="#Aero-Timer-Plus" class="headerlink" title="Aero Timer Plus"></a>Aero Timer Plus</h1><p>桌面时钟，包含定时关机，定时提醒等实用功能。</p>
-<hr>
 ]]></content>
       <categories>
         <category>收录</category>
@@ -1264,7 +1263,6 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 </ul>
 </li>
 </ul>
-<hr>
 ]]></content>
       <categories>
         <category>收录</category>
@@ -1482,7 +1480,6 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 700 gitpush</span><br></pre></td></tr></table></figure>
 
 <p>同步时，只需输入命令 <code>./gitpush</code> 即可</p>
-<hr>
 ]]></content>
       <categories>
         <category>termux教程</category>
@@ -1526,7 +1523,6 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf frp_0.19.0_linux_arm.tar.gz</span><br><span class="line">basepath=$(<span class="built_in">cd</span> `dirname <span class="variable">$0</span>`; <span class="built_in">pwd</span>)</span><br><span class="line">ln -s <span class="variable">$basepath</span> ~/</span><br><span class="line"><span class="built_in">cd</span> ~/frpc/</span><br><span class="line">./frpc -c frpc.ini</span><br></pre></td></tr></table></figure>
 
 <p>执行前,需要编辑配置文件 <code>frpc.ini</code>,对于该文件的配置，请参考<a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank" rel="noopener">官方说明文档</a></p>
-<hr>
 ]]></content>
       <categories>
         <category>termux教程</category>
@@ -1552,8 +1548,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>如果想让 <code>octave</code> 链接 <code>jupyter</code> ， 安装内核</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install octave-kernel</span><br></pre></td></tr></table></figure>
 
-<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1><hr>
-]]></content>
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
         <category>termux教程</category>
       </categories>
@@ -1608,8 +1603,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 
 <h2 id="安装-matplotlib"><a href="#安装-matplotlib" class="headerlink" title="安装 matplotlib"></a>安装 matplotlib</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">LDFLAGS=<span class="string">" -lm -lcompiler_rt"</span> pip install matplotlib</span><br></pre></td></tr></table></figure>
 <p>注意 <code>numpy</code> 是 <code>matplotlib</code> 的依赖包， 二者不能同时安装</p>
-<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1><hr>
-]]></content>
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
         <category>termux教程</category>
       </categories>
@@ -1666,8 +1660,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <h2 id="创建软链接"><a href="#创建软链接" class="headerlink" title="创建软链接"></a>创建软链接</h2><p>以 QQ 为例</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /data/data/com.termux/files/home/storage/shared/tencent/QQfile_recv QQ</span><br></pre></td></tr></table></figure>
 
-<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1><hr>
-]]></content>
+<h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
         <category>termux教程</category>
       </categories>
