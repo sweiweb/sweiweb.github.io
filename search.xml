@@ -1337,10 +1337,6 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>./post.md</p>
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">urlname:   # 为文章起个英文链接</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<h3 id="建立-QQ-的临时会话"><a href="#建立-QQ-的临时会话" class="headerlink" title="建立 QQ 的临时会话"></a>建立 QQ 的临时会话</h3><p>进入<a href="https://shang.qq.com/" target="_blank" rel="noopener">QQ推广网址</a>，并在右上角登录 QQ，点击<code>推广工具</code><strong>开通推广</strong>，最后将链接复制到博客对应位置即可</p>
-<ul>
-<li><code>http://wpa.qq.com/msgrd?v=3&amp;uin=你的QQ帐号&amp;site=qq&amp;menu=yes</code></li>
-</ul>
 <h1 id="hexo-使用教程"><a href="#hexo-使用教程" class="headerlink" title="hexo 使用教程"></a>hexo 使用教程</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [模版layout] &lt;题目title&gt;</span><br></pre></td></tr></table></figure>
 
 <p>通常情况下可直接输入 </p>
@@ -1413,6 +1409,19 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <li>音乐插件: <a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a></li>
 <li>豆瓣插件: <a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">hexo-douban</a></li>
 <li>搜索插件: <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></li>
+</ul>
+<h2 id="添加RSS订阅"><a href="#添加RSS订阅" class="headerlink" title="添加RSS订阅"></a>添加RSS订阅</h2><p>安装插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>blog/_config.yml</code> 文件中，添加以下配置</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">#RSS订阅</span></span><br><span class="line"><span class="attr">plugin:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<p>修改主题目录下的_config.yml文件，例如 <code>blog/themes/ayer/_config.yml</code> ，搜索 <code>RSS</code> 相关配置并修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rss: &#x2F;atom.xml</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-QQ-的临时会话连接"><a href="#添加-QQ-的临时会话连接" class="headerlink" title="添加 QQ 的临时会话连接"></a>添加 QQ 的临时会话连接</h2><p>进入<a href="https://shang.qq.com/" target="_blank" rel="noopener">QQ推广网址</a>，并在右上角登录 QQ，点击<code>推广工具</code><strong>开通推广</strong>，最后将链接复制到博客对应位置即可</p>
+<ul>
+<li><code>http://wpa.qq.com/msgrd?v=3&amp;uin=你的QQ帐号&amp;site=qq&amp;menu=yes</code></li>
 </ul>
 <hr>
 <h1 id="生成文件和图片链接"><a href="#生成文件和图片链接" class="headerlink" title="生成文件和图片链接"></a>生成文件和图片链接</h1><p>在以下网站注册账号，上传相应文件和图片，分享生成链接</p>
