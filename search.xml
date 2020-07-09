@@ -89,6 +89,20 @@
 <h1 id="Adobe-Photoshop"><a href="#Adobe-Photoshop" class="headerlink" title="Adobe Photoshop"></a>Adobe Photoshop</h1><p>图片编辑软件</p>
 <h1 id="Adobe-Audition"><a href="#Adobe-Audition" class="headerlink" title="Adobe Audition"></a>Adobe Audition</h1><p>音频编辑软件</p>
 <h1 id="listary"><a href="#listary" class="headerlink" title="listary"></a>listary</h1><p>一个真正令人惊奇和完善的搜索工具,介于启动程序和文件管理器之间,它与两者都有关系但不属于两者中的任何一个。</p>
+<p>可以添加 <code>关键词</code> 快速访问网址，进一步提升搜索效率</p>
+<ul>
+<li>百度翻译</li>
+</ul>
+<p>关键词 : fy</p>
+<p>URL : <a href="http://fanyi.baidu.com/?aldtype=16047#en/zh/{query}" target="_blank" rel="noopener">http://fanyi.baidu.com/?aldtype=16047#en/zh/{query}</a></p>
+<ul>
+<li>百度翻译</li>
+</ul>
+<p>关键词 : gfy</p>
+<p>URL : <a href="https://translate.google.cn/#view=home&amp;op=translate&amp;sl=auto&amp;tl=en&amp;text={query}" target="_blank" rel="noopener">https://translate.google.cn/#view=home&amp;op=translate&amp;sl=auto&amp;tl=en&amp;text={query}</a></p>
+<h1 id="Clover"><a href="#Clover" class="headerlink" title="Clover"></a>Clover</h1><p>为文件夹添加像 <code>Chrome</code> 一样的标签栏</p>
+<h1 id="WindowTabs"><a href="#WindowTabs" class="headerlink" title="WindowTabs"></a>WindowTabs</h1><p>为所有软件添加标签栏， 但是不能在<strong>win10</strong>系统上完美运行。</p>
+<h1 id="translucentTB"><a href="#translucentTB" class="headerlink" title="translucentTB"></a>translucentTB</h1><p>支持 <code>win10</code> 系统的任务栏透明美化工具</p>
 <h1 id="CCleaner"><a href="#CCleaner" class="headerlink" title="CCleaner"></a>CCleaner</h1><p>计算机文件清理工具，清除电脑里不需要的垃圾文件</p>
 <h1 id="Total-Uninstall"><a href="#Total-Uninstall" class="headerlink" title="Total Uninstall"></a>Total Uninstall</h1><p>卸载软件总卸载不干净？ <code>Total Uninstall</code> 软件安装卸载监视，能帮你监视软件安装的所有过程，并记录下它对系统所做的<strong>任何改变</strong>的软件，比如：添加的文件、对注册表和系统文件的修改，并制作成安装前和安装后的快照。卸载软件时不需要使用卸载程序，直接通过 <code>Total Uninstall</code> 便可将其完全地清除出系统，不留下任何痕迹。总的来说，使用它，可以实现对软件的完美卸载。</p>
 <h1 id="Sandboxie"><a href="#Sandboxie" class="headerlink" title="Sandboxie"></a>Sandboxie</h1><p>基于主机入侵防御系统的沙盘工具。允许你在沙盘环境中运行浏览器或其他程序，因此运行所产生的变化可以随后删除。有以下好处：</p>
