@@ -85,6 +85,8 @@
 <p>格式工厂，支持多种格式转换</p>
 <h1 id="Bandicam"><a href="#Bandicam" class="headerlink" title="Bandicam"></a>Bandicam</h1><p>屏幕录制工具，窗口，游戏都可以录制，生成的视频清晰，且体积小。</p>
 <h1 id="Adobe-Acrobat-XI-DC"><a href="#Adobe-Acrobat-XI-DC" class="headerlink" title="Adobe Acrobat XI / DC"></a>Adobe Acrobat XI / DC</h1><p>PDF阅读器，XI 和 DC 这两个版本界面风格迥异，根据个人喜好下载。</p>
+<p>有些时候，Acrobat 打开pdf时出现 <code>内容准备进度</code> 的进度条，影响阅读速度，解决方案为：</p>
+<p>删除Adobe Acrobat安装目录下的 <code>pulg_ins/accessibility.api</code> 文件</p>
 <h1 id="Adobe-Premiere"><a href="#Adobe-Premiere" class="headerlink" title="Adobe Premiere"></a>Adobe Premiere</h1><p>视频剪辑工具</p>
 <h1 id="Adobe-Photoshop"><a href="#Adobe-Photoshop" class="headerlink" title="Adobe Photoshop"></a>Adobe Photoshop</h1><p>图片编辑软件</p>
 <h1 id="Adobe-Audition"><a href="#Adobe-Audition" class="headerlink" title="Adobe Audition"></a>Adobe Audition</h1><p>音频编辑软件</p>
