@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SSH远程登录脚本</title>
+    <url>/ssh_script/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
+<p>Secure Shell(SSH) 是由 IETF(The Internet Engineering Task Force) 制定的建立在应用层基础上的安全网络协议。它是专为远程登录会话(甚至可以用Windows远程登录Linux服务器进行文件互传)和其他网络服务提供安全性的协议，可有效弥补网络中的漏洞。通过SSH，可以把所有传输的数据进行加密，也能够防止DNS欺骗和IP欺骗。还有一个额外的好处就是传输的数据是经过压缩的，所以可以加快传输的速度。目前已经成为Linux系统的标准配置。</p>
+</blockquote>
+<p>我们每次登入服务器终端不仅要输入<strong>一长串的指令</strong>，同时还需要等待连接并输入密码，操作过程不便，甚至不如使用 <code>xshell</code> 方便。因此，此教程编写脚本实现了两个目的：</p>
+<ul>
+<li>无密码登入</li>
+<li>不需要输入复杂的指令</li>
+</ul>
+<p style="color:green">
+无密码登入虽然可以使用 `rsa公私钥机制` 创建密钥对，但是输入的指令依然不会减少，只是免去了输入密码的时间。因此，这里我们不采用该方法。
+</p>
+
+<hr>
+<h1 id="方法一：使用-sshpass-脚本"><a href="#方法一：使用-sshpass-脚本" class="headerlink" title="方法一：使用 sshpass 脚本"></a>方法一：使用 sshpass 脚本</h1><p>sshpass 用法如下： sshpass -p ‘你的密码’ ssh 用户名@服务器ip地址 -p 端口</p>
+<p>因此，这可以满足在不输入密码的情况下编写脚本。例如</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/usr/bin/bash</span></span><br><span class="line"></span><br><span class="line">if [ $1 == "30" ];then          # 用户名1</span><br><span class="line"></span><br><span class="line">    password = xxxxxxxxx        # 设置用户名1的密码</span><br><span class="line">    sshpass -p $password ssh -l sw 192.168.1.30    # ssh登入命令</span><br><span class="line"></span><br><span class="line">elif [ $1 == "40" ];then        # 用户名2</span><br><span class="line"></span><br><span class="line">    password = xxxxxxxxx</span><br><span class="line">    sshpass -p $password ssh -l sw 192.168.1.40</span><br><span class="line"></span><br><span class="line">elif [ $1 == "50" ];then        # 用户名3</span><br><span class="line"></span><br><span class="line">    password = xxxxxxxxx</span><br><span class="line">    sshpass -p $password ssh -l sw 192.168.1.50</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p><strong>因为实际上的输入命令只有一条， 可以不必使用脚本，直接在根目录下修改 <code>.bashrc</code> 文件，在文件内添加：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">alias 用户名 = 'sshpass -p xxxxxxxxx ssh -l sw 192.168.1.30'</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="方法二：使用-expect-语法"><a href="#方法二：使用-expect-语法" class="headerlink" title="方法二：使用 expect 语法"></a>方法二：使用 expect 语法</h1><p>没啥解释的，直接上例子吧！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;expect -f</span><br><span class="line"></span><br><span class="line">set timeout -1</span><br><span class="line">set username [lindex $argv 0]</span><br><span class="line"></span><br><span class="line">if &#123; $username &#x3D;&#x3D; &quot;30&quot; &#125; &#123;          # 用户名1</span><br><span class="line">    set password xxxxxxxxx         # 设置用户名1的密码</span><br><span class="line"></span><br><span class="line">    spawn ssh -l sw 192.168.1.30    # ssh登入命令</span><br><span class="line"></span><br><span class="line">    expect &#123;</span><br><span class="line">        &quot;(yes&#x2F;no)?&quot; &#123;</span><br><span class="line">            send &quot;yes\n&quot;</span><br><span class="line">            expect &quot;password:&quot;</span><br><span class="line">            send &quot;$password\n&quot;</span><br><span class="line">        &#125;</span><br><span class="line">        &quot;password:&quot; &#123;</span><br><span class="line">            send &quot;$password\n&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; elseif &#123; $username &#x3D;&#x3D; &quot;40&quot; &#125; &#123;    # 用户名2</span><br><span class="line">        set password xxxxxxxxx</span><br><span class="line"></span><br><span class="line">        spawn ssh -l wyx 192.168.1.40</span><br><span class="line"></span><br><span class="line">        expect &#123;</span><br><span class="line">            &quot;(yes&#x2F;no)?&quot; &#123;</span><br><span class="line">                send &quot;yes\n&quot;</span><br><span class="line">                expect &quot;password:&quot;</span><br><span class="line">                send &quot;$password\n&quot;</span><br><span class="line">            &#125;</span><br><span class="line">            &quot;password:&quot; &#123;</span><br><span class="line">                send &quot;$password\n&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#125; elseif &#123; $username &#x3D;&#x3D; &quot;50&quot; &#125; &#123;    # 用户名3</span><br><span class="line">        set password xxxxxxxxx</span><br><span class="line"></span><br><span class="line">        spawn ssh -l sw 192.168.1.50</span><br><span class="line"></span><br><span class="line">        expect &#123;</span><br><span class="line">            &quot;(yes&#x2F;no)?&quot; &#123;</span><br><span class="line">                send &quot;yes\n&quot;</span><br><span class="line">                expect &quot;password:&quot;</span><br><span class="line">                send &quot;$password\n&quot;</span><br><span class="line">            &#125;</span><br><span class="line">            &quot;password:&quot; &#123;</span><br><span class="line">                send &quot;$password\n&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interact</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h1><ol>
+<li><p>首先给脚本执行权限<code>chmod 777 脚本名</code></p>
+</li>
+<li><p>在脚本所在目录输入 <code>./脚本名 用户名</code></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>linux 教程</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>必备软件收录</title>
     <url>/basic_software/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h1><p><a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank" rel="noopener">下载地址：https://www.google.cn/intl/zh-CN/chrome/</a></p>
