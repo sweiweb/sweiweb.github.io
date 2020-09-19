@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://sweiweb.gitee.io/poscar/</loc>
+    <loc>https://sweiweb.gitee.io/html_syntax/</loc>
     
-    <lastmod>2020-09-19T08:38:43.800Z</lastmod>
+    <lastmod>2020-09-19T09:51:29.640Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://sweiweb.gitee.io/ssh_script/</loc>
     
-    <lastmod>2020-09-19T08:34:11.900Z</lastmod>
+    <lastmod>2020-09-19T09:51:22.900Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/install_termux/</loc>
+    
+    <lastmod>2020-09-19T09:51:16.260Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/build_blog/</loc>
+    
+    <lastmod>2020-09-19T09:51:12.270Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/build_netdisk/</loc>
+    
+    <lastmod>2020-09-19T09:51:07.990Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/install_octave/</loc>
+    
+    <lastmod>2020-09-19T09:51:02.720Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/install_python/</loc>
+    
+    <lastmod>2020-09-19T09:50:58.340Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/poscar/</loc>
+    
+    <lastmod>2020-09-19T08:38:43.800Z</lastmod>
     
   </url>
   
@@ -58,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://sweiweb.gitee.io/build_blog/</loc>
-    
-    <lastmod>2020-04-05T06:30:03.570Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sweiweb.gitee.io/gallery/landscape/index.html</loc>
     
     <lastmod>2020-04-01T08:17:41.050Z</lastmod>
@@ -72,44 +107,9 @@
   </url>
   
   <url>
-    <loc>https://sweiweb.gitee.io/html_syntax/</loc>
-    
-    <lastmod>2020-04-01T04:09:11.030Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sweiweb.gitee.io/gallery/simple/index.html</loc>
     
     <lastmod>2020-03-31T11:00:32.040Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/install_termux/</loc>
-    
-    <lastmod>2020-03-31T07:10:50.990Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/build_netdisk/</loc>
-    
-    <lastmod>2020-03-31T07:10:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/install_octave/</loc>
-    
-    <lastmod>2020-03-31T07:10:26.410Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/install_python/</loc>
-    
-    <lastmod>2020-03-31T07:10:17.980Z</lastmod>
     
   </url>
   

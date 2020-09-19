@@ -94,7 +94,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>linux 教程</category>
+        <category>linux</category>
       </categories>
       <tags>
         <tag>ssh</tag>
@@ -384,7 +384,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 </ul>
 ]]></content>
       <categories>
-        <category>termux教程</category>
+        <category>termux</category>
       </categories>
       <tags>
         <tag>HTML</tag>
@@ -1642,7 +1642,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>同步时，只需输入命令 <code>./gitpush</code> 即可</p>
 ]]></content>
       <categories>
-        <category>termux教程</category>
+        <category>termux</category>
       </categories>
       <tags>
         <tag>博客</tag>
@@ -1685,7 +1685,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>执行前,需要编辑配置文件 <code>frpc.ini</code>,对于该文件的配置，请参考<a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank" rel="noopener">官方说明文档</a></p>
 ]]></content>
       <categories>
-        <category>termux教程</category>
+        <category>termux</category>
       </categories>
       <tags>
         <tag>termux</tag>
@@ -1710,7 +1710,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 
 <h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
-        <category>termux教程</category>
+        <category>termux</category>
       </categories>
       <tags>
         <tag>termux</tag>
@@ -1765,7 +1765,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 <p>注意 <code>numpy</code> 是 <code>matplotlib</code> 的依赖包， 二者不能同时安装</p>
 <h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
-        <category>termux教程</category>
+        <category>termux</category>
       </categories>
       <tags>
         <tag>termux</tag>
@@ -1822,7 +1822,7 @@ This is a paragraph with some text in it. This is a paragraph with some text in 
 
 <h1 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h1>]]></content>
       <categories>
-        <category>termux教程</category>
+        <category>termux</category>
       </categories>
       <tags>
         <tag>termux</tag>
