@@ -18,7 +18,7 @@
 <p>2 选择需要固定的原子。脚本提供了两种选择方式，第一种为直接输入一个正整数 N ，代表固定的第 N 号原子。该方法复杂，需要查看固定原子的序号。因此，当需要固定的原子多时， 推荐另外一种方法：</p>
 <p>3 第二种方法由两个关键词组成。例如 </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;脚本名 a 1.2</span><br></pre></td></tr></table></figure>
-<p>该脚本实现的目的为当原子的 a 方向分量小于1.2时，则对该原子进行固定。a 为判断比较的轴，可是输入 a， b， c或者x， y， z。如果不输入，则默认比较c轴。例如对结构文件进行固定基地的操作，可以直接输入：</p>
+<p>该脚本实现的目的为当原子的 a 方向分量小于1.2时，则对该原子进行固定。a 为判断比较的轴，可是输入 a， b， c或者x， y， z。如果不输入，则默认比较c轴。例如对结构文件进行固定基底的操作，可以直接输入：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;脚本名 0.2</span><br></pre></td></tr></table></figure>
 <p>注意，为了与第一种方法区分，该方法输入的数字必须为小数。如果需要对比较轴的中间部分原子进行固定，脚本提供了在小数前加‘~’的方法，如</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;脚本名 0.3 ~0.1</span><br></pre></td></tr></table></figure>
