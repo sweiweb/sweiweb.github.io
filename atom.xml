@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sweiweb.gitee.io/"/>
-  <updated>2020-09-19T08:38:43.800Z</updated>
+  <updated>2020-09-24T12:59:01.290Z</updated>
   <id>https://sweiweb.gitee.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>替换EXE图标</title>
+    <link href="https://sweiweb.gitee.io/replace_icon/"/>
+    <id>https://sweiweb.gitee.io/replace_icon/</id>
+    <published>2020-09-24T12:35:00.000Z</published>
+    <updated>2020-09-24T12:59:01.290Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>目的：如果不喜欢某些软件的图标，可以采用 <code>Resource Hacker</code> 软件进行图标的替换。方法如下：</p><blockquote><p>Resource Hacker™是用于32位和64位Windows®应用程序的资源编辑器。它既是资源编译器（<em>.rc），又是反编译器 -支持查看和编辑可执行文件（</em>.exe; <em>.dll; *.scr;等）和已编译的资源库（</em>.res，*.mui）。尽管Resource Hacker™主要是一个GUI应用程序，但它也提供了许多用于从命令行编译和反编译资源的选项。</p></blockquote><ol><li>下载 <code>Resource Hacker</code> </li></ol><p><a href="http://www.angusj.com/resourcehacker/" target="_blank" rel="noopener">下载地址：http://www.angusj.com/resourcehacker/</a></p><ol start="2"><li>找一个自己喜欢的图标</li></ol><p>在<code>Resource Hacker</code>软件中选择 <code>文件</code> -&gt; <code>打开</code> ，找到 <code>图标组</code> 目录下的图标，右键 <code>将资源保存到RES文件(E)</code>。</p><ol start="3"><li>替换图标</li></ol><p>在<code>Resource Hacker</code>软件中打开需要替换的exe文件，重复上述操作，对 <code>图标组</code> 目录下的图标右键选择 <code>替换图标(R)</code>。</p><ol start="4"><li>点击保存。</li></ol><p>替换完成后，保存即可。</p><p>注意： 由于电脑缓存原因，刚替换好的图标并不会立即显示，可将程序拷贝至其他目录查看。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="软件教程" scheme="https://sweiweb.gitee.io/categories/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Resource Hacker" scheme="https://sweiweb.gitee.io/tags/Resource-Hacker/"/>
+    
+  </entry>
   
   <entry>
     <title>POSCAR的脚本处理</title>
