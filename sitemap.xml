@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sweiweb.gitee.io/poems/</loc>
+    
+    <lastmod>2020-09-26T05:01:02.610Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sweiweb.gitee.io/ssh_script/</loc>
+    
+    <lastmod>2020-09-26T05:00:03.080Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sweiweb.gitee.io/basic_software/</loc>
     
     <lastmod>2020-09-24T13:21:40.320Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>https://sweiweb.gitee.io/movies/index.html</loc>
     
     <lastmod>2020-09-20T07:37:42.860Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/ssh_script/</loc>
-    
-    <lastmod>2020-09-20T04:13:19.350Z</lastmod>
     
   </url>
   
@@ -96,13 +103,6 @@
     <loc>https://sweiweb.gitee.io/music/1%E9%9D%99%E6%80%81.html</loc>
     
     <lastmod>2020-04-26T13:34:08.140Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sweiweb.gitee.io/poems/</loc>
-    
-    <lastmod>2020-04-09T10:36:57.540Z</lastmod>
     
   </url>
   
