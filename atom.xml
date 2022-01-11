@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sweiweb.gitee.io/"/>
-  <updated>2022-01-11T02:44:17.352Z</updated>
+  <updated>2022-01-11T02:46:22.912Z</updated>
   <id>https://sweiweb.gitee.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>windows子系统WSL的配置</title>
-    <link href="https://sweiweb.gitee.io/null/"/>
-    <id>https://sweiweb.gitee.io/null/</id>
+    <link href="https://sweiweb.gitee.io/wsl/"/>
+    <id>https://sweiweb.gitee.io/wsl/</id>
     <published>2022-01-11T02:10:27.000Z</published>
-    <updated>2022-01-11T02:44:17.352Z</updated>
+    <updated>2022-01-11T02:46:22.912Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote><p>Windows Subsystem for Linux（简称WSL）是一个在Windows 10上能够运行原生Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，其目标是使纯正的Ubuntu、Debian等映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。</p></blockquote><h1 id="开启WSL"><a href="#开启WSL" class="headerlink" title="开启WSL"></a>开启WSL</h1><ul><li><p>打开<code>设置</code></p></li><li><p>进入<code>应用</code></p></li><li><p>选择<code>应用和功能</code></p></li><li><p>点击<code>程序和功能</code></p></li><li><p>点击<code>启用或关闭Windows功能</code></p></li><li><p>勾选<code>适用于Linux的Windows子系统</code></p></li></ul><h1 id="安装Linux发行版"><a href="#安装Linux发行版" class="headerlink" title="安装Linux发行版"></a>安装Linux发行版</h1><p>打开<code>Win10应用商店</code>搜索你喜欢的Linux发行版并安装，如Ubuntu，Kali Linux，Debian等</p><p>这里我们以Ubuntu为例继续。</p><p>一般情况下，程序包内还要下载Linux软件包，占用空间可能很大。我们可以将下载的.appx程序修改扩展名为.zip，解压到D盘后，开打解压文件夹下的<code>ubuntu.exe</code>进行安装。</p><p>安装完成后按提示输入默认用户名、密码。</p><p>至此安装完成，接下来进行相关软件的安装。</p><hr><h1 id="安装Windows-Terminal"><a href="#安装Windows-Terminal" class="headerlink" title="安装Windows Terminal"></a>安装Windows Terminal</h1><ul><li></li></ul>]]></content>
     
@@ -35,12 +35,12 @@
     </summary>
     
     
-      <category term="WSL" scheme="https://sweiweb.gitee.io/categories/WSL/"/>
+      <category term="windows" scheme="https://sweiweb.gitee.io/categories/windows/"/>
     
     
       <category term="linux" scheme="https://sweiweb.gitee.io/tags/linux/"/>
     
-      <category term="windows" scheme="https://sweiweb.gitee.io/tags/windows/"/>
+      <category term="WSL" scheme="https://sweiweb.gitee.io/tags/WSL/"/>
     
   </entry>
   
