@@ -188,6 +188,12 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">p10k configure</span><br></pre></td></tr></table></figure>
 
 <hr>
+<h1 id="安装octave"><a href="#安装octave" class="headerlink" title="安装octave"></a>安装octave</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install octave</span><br></pre></td></tr></table></figure>
+
+<p>如果终端启动<code>octave</code>报错：<br>error while loading shared libraries: libQt5Core.so.5: cannot open shared object file: No such file or directory</p>
+<p>执行以下命令解决</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libqt5core5a</span><br><span class="line">sudo strip --remove-section=.note.ABI-tag /lib/x86_64-linux-gnu/libQt5Core.so.5</span><br></pre></td></tr></table></figure>
+
 <h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1>]]></content>
       <categories>
         <category>windows</category>
