@@ -105,8 +105,7 @@ function activateLightMode(){
 
 <hr>
 <h1 id="切换WSL和WSL2"><a href="#切换WSL和WSL2" class="headerlink" title="切换WSL和WSL2"></a>切换WSL和WSL2</h1><p>WSL 1 与 WSL 2 特性比较</p>
-<p>说明如下：</p>
-<ul>
+<ol>
 <li><p>WSL1 和 WSL2 都可以实现在 windows 中带来 linux 操作体验；</p>
 </li>
 <li><p>启动速度都不慢；</p>
@@ -123,7 +122,7 @@ function activateLightMode(){
 </li>
 <li><p>WSL 2 不能与 windows 跨操作系统文件操作(Windows 访问 WSL2 的方法为进行 WSL2 环境键入 “cd ~” 进入主目录后，再键入”explorer.exe .”可在windows 文件管理器中访问 WSL 2 文件，此外还可以通过虚拟机的方法互通文件，如网络，文件共享等)，而 WSL 1 则与 windows 在同一文件系统中。</p>
 </li>
-</ul>
+</ol>
 <p>两者之间的切换可以通过以下命令在<code>powershell</code>中进行更改。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-list</span> <span class="literal">-v</span> <span class="comment">#显示安装的发行版是WSL还是WSL2</span></span><br><span class="line">wsl -<span class="literal">-set</span><span class="literal">-default</span><span class="literal">-version</span> <span class="number">1</span> <span class="comment">#设置默认的是WSL还是WSL2</span></span><br><span class="line">wsl -<span class="literal">-set</span><span class="literal">-version</span> Ubuntu<span class="literal">-20</span>.<span class="number">04</span> <span class="number">1</span> <span class="comment">#更改Ununtu的WSL版本</span></span><br></pre></td></tr></table></figure>
 <p>注意，首次启用WSL2需要在<code>启用或关闭Windows功能</code>中勾选<code>虚拟机平台</code>。</p>
@@ -238,11 +237,11 @@ function activateLightMode(){
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh <span class="comment">#或者输入 chsh -s `which zsh`</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>下载<code>powerlin10K</code>主题</li>
+<li>下载<code>powerlevel10K</code>主题</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="variable">$&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k</span><br></pre></td></tr></table></figure>
 
-<p>终端输入<code>vi ~/.zshrc</code>以编辑</p>
+<p>终端输入<code>vi ~/.zshrc</code>，修改以下内容设置主题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME &#x3D; powerlevel10k&#x2F;powerlevel10k</span><br></pre></td></tr></table></figure>
 
 <p>下载支持该主题的字体<code>Hack Nerd Font</code>，字体官网链接：<a href="https://nerdfonts.com/" target="_blank" rel="noopener">https://nerdfonts.com/</a></p>
@@ -250,7 +249,7 @@ function activateLightMode(){
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip SourceCodePro -d /usr/share/fonts/SourceCodePro <span class="comment">#解压字体文件夹</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /usr/share/fonts/SourceCodePro</span><br><span class="line">sudo mkfontscale <span class="comment"># 生成核心字体信息</span></span><br><span class="line">sudo mkfontdir <span class="comment"># 生成字体文件夹</span></span><br><span class="line">sudo <span class="built_in">fc</span>-cache -fv <span class="comment"># 刷新系统字体缓存</span></span><br></pre></td></tr></table></figure>
 
 <p>下载后，在<code>Windows Terminal</code>中配置好字体即可。</p>
-<p>配置主题<code>powerline10K</code>向导，终端输入</p>
+<p>启动<code>powerlevel10K</code>主题向导，终端输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p10k configure</span><br></pre></td></tr></table></figure>
 
 <hr>
